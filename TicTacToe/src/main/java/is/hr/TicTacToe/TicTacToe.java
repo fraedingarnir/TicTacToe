@@ -5,8 +5,9 @@ public class TicTacToe {
 	private static final char empty = ' ';
 	private static final char X = 'x';
 	private static final char O = 'o';
-	private static int currentState; //
+	private static boolean isWon = false; //
 	private static final int COL = 9;
+<<<<<<< HEAD
 	private static char[] board;
 	private static boolean PlayerTurn;
 
@@ -14,17 +15,20 @@ public class TicTacToe {
 	{
 			board = new char[COL];
 	}
+=======
+	private static char[] board = new char[COL];
+	private static boolean PlayerTurn = false;
+>>>>>>> eb7864d9002236d368e810846602fcf9eac9e364
 	
-	public void InitGame()
+	public static void InitGame()
 	{
     	for (int col = 0; col < COL; ++col) 
 		{
     		board[col] = empty;
 		}
-		PlayerTurn = false;
 	}
 
-	public void PlayerTurn()
+	public static void PlayerTurn()
 	{
 		for(int turn = 0; turn < 9; turn++)
 		{
@@ -39,6 +43,7 @@ public class TicTacToe {
 		}
 	}
 
+<<<<<<< HEAD
 	public void printBoard()
 	{
 		int line = 0;
@@ -59,5 +64,28 @@ public class TicTacToe {
 			ttt.printBoard();
 	}
 		*/
+=======
+	private static boolean CheckWon()
+	{        
+		if (board[0] == board[3] && board[3] == board[6] && (board[0] == X || board[0] == O)) 
+            return true;
+        else if (board[3] == board[4] && board[4] == board[5] && (board[3] == X || board[3] == O))
+            return true;
+        else if (board[2] == board[5] && board[5] == board[8] && (board[2] == X || board[2] == O)) 
+            return true;
+        else if (board[0] == board[1] && board[1] == board[2] && (board[0] == X || board[0] == O)) 
+            return true;
+        else if (board[3] == board[4] && board[4] == board[5] && (board[3] == X || board[3] == O)) 
+            return true;
+        else if (board[6] == board[7] && board[7] == board[8] && (board[6] == X || board[6] == O)) 
+            return true;
+        else if (board[0] == board[4] && board[4] == board[8] && (board[0] == X || board[0] == O)) 
+            return true;
+        else if (board[2] == board[4] && board[4] == board[6] && (board[2] == X || board[2] == O)) 
+            return true;
+        else 
+            return false;
+	}
+>>>>>>> eb7864d9002236d368e810846602fcf9eac9e364
 }
 
