@@ -12,3 +12,4 @@ public class ChuckTest {
     public void randomJokeContainsName() {
         Chuck chuck = new Chuck();
         assertThat(chuck.random(), containsString("Chuck Norris"));
+    }
