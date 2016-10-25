@@ -7,8 +7,18 @@ public class TicTacToe {
 	private static final char O = 'o';
 	private static boolean isWon = false; //
 	private static final int COL = 9;
+<<<<<<< HEAD
+	private static char[] board;
+	private static boolean PlayerTurn;
+
+	public TicTacToe()
+	{
+			board = new char[COL];
+	}
+=======
 	private static char[] board = new char[COL];
 	private static boolean PlayerTurn = false;
+>>>>>>> eb7864d9002236d368e810846602fcf9eac9e364
 	
 	public static void InitGame()
 	{
@@ -33,6 +43,28 @@ public class TicTacToe {
 		}
 	}
 
+<<<<<<< HEAD
+	public void printBoard()
+	{
+		int line = 0;
+		for(int row = 0; row < 3; row++){
+			for(int col = line; col < line+3; col++)
+				if(col%3 != 0)
+					System.out.print(board[col] + " | ");
+			if(row != 2)
+				System.out.println("\n--|---|--");
+			line += 3;
+		}
+
+	}
+	/*
+	public static void main(String[] args) {
+			TicTacToe ttt = new TicTacToe();
+			ttt.InitGame();
+			ttt.printBoard();
+	}
+		*/
+=======
 	private static boolean CheckWon()
 	{        
 		if (board[0] == board[3] && board[3] == board[6] && (board[0] == X || board[0] == O)) 
@@ -54,4 +86,6 @@ public class TicTacToe {
         else 
             return false;
 	}
+>>>>>>> eb7864d9002236d368e810846602fcf9eac9e364
 }
+
