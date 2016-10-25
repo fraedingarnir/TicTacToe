@@ -1,5 +1,7 @@
 package is.hr.TicTacToe;
 
+import java.util.Scanner
+
 public class TicTacToe {
 	
 	private static final char empty = ' ';
@@ -13,6 +15,7 @@ public class TicTacToe {
 	public TicTacToe()
 	{
 			board = new char[COL];
+			Scanner in = new Scanner(System.in);	
 	}
 	
 	public static void InitGame()
@@ -29,11 +32,53 @@ public class TicTacToe {
 		{
 			if(!PlayerTurn)
 			{
-				System.out.println("Player X, your turn");
+				while(!PlayerTurn)
+				{
+					printBoard();
+					System.out.println("Player X, your turn, pick a value between 1-9");
+					int Value = in.ReadInt();
+					if(0 < Value > 10)
+					{
+						if(CheckFilled(Value))
+							;
+						else
+						{
+							board[Value] = X;
+							PlayerTurn = true;
+						}
+
+					}
+					else
+					{
+						System.out.println("Value out of range");
+					}
+				}
+
+
 			}
 			else
 			{
-				System.out.println("Player O, your turn");
+				while(PlayerTurn)
+				{
+					printBoard();
+					System.out.println("Player X, your turn, pick a value between 1-9");
+					int Value = in.ReadInt();
+					if(0 < Value > 10)
+					{
+						if(CheckFilled(Value))
+							;
+						else
+						{
+							board[Value] = O;
+							PlayerTurn = false;
+						}
+
+					}
+					else
+					{
+						System.out.println("Value out of range");
+					}
+				}
 			}
 		}
 	}
@@ -79,6 +124,14 @@ public class TicTacToe {
             return true;
         else 
             return false;
+	}
+
+	private static boolean CheckFilled(int num)
+	{
+		if(board[num] == X || board[num] = O)
+			return true;
+		else
+			return false;
 	}
 }
 
