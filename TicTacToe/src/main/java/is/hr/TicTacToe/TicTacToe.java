@@ -10,7 +10,7 @@ public class TicTacToe {
 	private static boolean isWon = false; //
 	private static final int COL = 9;
 	private static char[] board;
-	private static boolean PlayerTurn = false;
+	private static boolean PlayerTurn = false; //false for X and true for O
 	private static Scanner in;
 
 	public TicTacToe()
@@ -45,6 +45,11 @@ public class TicTacToe {
 						else
 						{
 							board[Value] = X;
+							if(CheckWon())
+							{
+								System.out.println("Congratulations X, you won!");
+								isWon = true;
+							}
 							PlayerTurn = true;
 						}
 
@@ -71,6 +76,12 @@ public class TicTacToe {
 						else
 						{
 							board[Value] = O;
+							if(CheckWon())
+							{
+								System.out.println("Congratulations X, you won!");
+								isWon = true;
+
+							}
 							PlayerTurn = false;
 						}
 
@@ -104,8 +115,20 @@ public class TicTacToe {
 	
 	public static void main(String[] args) {
 			TicTacToe ttt = new TicTacToe();
-			ttt.InitGame();
-			ttt.printBoard();
+			char Play = 'Y';
+			while(Play == 'Y' || Play == 'y')
+			{
+				ttt.InitGame();
+				ttt.PlayerTurn();
+				if(!isWon)
+				{
+					System.out.println("It's a tie!");
+				}
+				System.out.println("Another game? (Y/N)");
+				Play = (char)in.nextInt();
+			}
+			
+
 	}
 
 	private static boolean CheckWon()
