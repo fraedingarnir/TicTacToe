@@ -1,6 +1,6 @@
 package is.hr.TicTacToe;
 
-import java.util.Scanner
+import java.util.Scanner;
 
 public class TicTacToe {
 	
@@ -11,11 +11,12 @@ public class TicTacToe {
 	private static final int COL = 9;
 	private static char[] board;
 	private static boolean PlayerTurn = false;
+	private static Scanner in;
 
 	public TicTacToe()
 	{
 			board = new char[COL];
-			Scanner in = new Scanner(System.in);	
+			in = new Scanner(System.in);	
 	}
 	
 	public void InitGame()
@@ -36,8 +37,8 @@ public class TicTacToe {
 				{
 					printBoard();
 					System.out.println("Player X, your turn, pick a value between 1-9");
-					int Value = in.ReadInt();
-					if(0 < Value > 10)
+					int Value = in.nextInt();
+					if(0 < Value && Value > 10)
 					{
 						if(CheckFilled(Value))
 							;
@@ -62,8 +63,8 @@ public class TicTacToe {
 				{
 					printBoard();
 					System.out.println("Player X, your turn, pick a value between 1-9");
-					int Value = in.ReadInt();
-					if(0 < Value > 10)
+					int Value = in.nextInt();
+					if(0 < Value && Value > 10)
 					{
 						if(CheckFilled(Value))
 							;
@@ -83,7 +84,7 @@ public class TicTacToe {
 		}
 	}
 
-	public void printBoard()
+	public static void printBoard()
 	{
 		int line = 0;
 		for(int row = 0; row < 3; row++){
@@ -131,7 +132,7 @@ public class TicTacToe {
 
 	private static boolean CheckFilled(int num)
 	{
-		if(board[num] == X || board[num] = O)
+		if(board[num] == X || board[num] == O)
 			return true;
 		else
 			return false;
