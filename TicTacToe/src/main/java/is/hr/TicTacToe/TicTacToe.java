@@ -56,13 +56,12 @@ public class TicTacToe {
 		}
 
 	}
-	/*
+	
 	public static void main(String[] args) {
 			TicTacToe ttt = new TicTacToe();
 			ttt.InitGame();
 			ttt.printBoard();
 	}
-		*/
 
 	private static boolean CheckWon()
 	{        
