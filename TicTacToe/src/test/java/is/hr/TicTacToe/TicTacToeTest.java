@@ -7,13 +7,11 @@ import org.junit.Test;
 public class TicTacToeTest {
 	
 	public static void main(String args[]) {
-    org.junit.runner.JUnitCore.main("is.hr.TicTacToe.TicTacToeTest");
+        org.junit.runner.JUnitCore.main("is.hr.TicTacToe.TicTacToeTest");
     }
-	
-	@Rule
-    public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
-    @Test
+	/*
+       @Test
     public void testPlayerTurn() {
         TicTacToe.PlayerTurn();
         assertEquals("Player X, your turn", systemOutRule.getLog());
@@ -25,5 +23,6 @@ public class TicTacToeTest {
 		assertEquals("Player X, your turn", TicTacToe.PlayerTurn());
 	}
 	*/
+
 	
 }

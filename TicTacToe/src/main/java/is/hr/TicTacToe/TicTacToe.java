@@ -18,12 +18,13 @@ public class TicTacToe {
 			Scanner in = new Scanner(System.in);	
 	}
 	
-	public static void InitGame()
+	public void InitGame()
 	{
-    	for (int col = 0; col < COL; ++col) 
+    		for (int col = 49; col < 49+COL; ++col) 
 		{
-    		board[col] = empty;
+    			board[col-49] = (char) col;
 		}
+		PlayerTurn = false;
 	}
 
 	public static void PlayerTurn()
@@ -88,21 +89,24 @@ public class TicTacToe {
 		int line = 0;
 		for(int row = 0; row < 3; row++){
 			for(int col = line; col < line+3; col++)
-				if(col%3 != 0)
-					System.out.print(board[col] + " | ");
+			{
+				System.out.print(" " + board[col]);
+				if(col != 2 && col != 5 && col != 8 || col == 0)
+					System.out.print(" |");
+			}
+			
 			if(row != 2)
-				System.out.println("\n--|---|--");
+				System.out.println("\n---|---|---");
 			line += 3;
 		}
 
 	}
-	/*
+	
 	public static void main(String[] args) {
 			TicTacToe ttt = new TicTacToe();
 			ttt.InitGame();
 			ttt.printBoard();
 	}
-		*/
 
 	private static boolean CheckWon()
 	{        
