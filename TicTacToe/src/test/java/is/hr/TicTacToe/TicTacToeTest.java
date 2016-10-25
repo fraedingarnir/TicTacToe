@@ -16,13 +16,31 @@ public class TicTacToeTest {
         TicTacToe.PlayerTurn();
         assertEquals("Player X, your turn", systemOutRule.getLog());
     }
-	
+	*/
 	/*
 	@Test
 	public void testEmptyString() {
 		assertEquals("Player X, your turn", TicTacToe.PlayerTurn());
 	}
+	
+	@Test
+	public void testFunc {
+		private static boolean PlayerTurn = false;
+		TicTacToe.
+		
+	}
 	*/
-
+	
+	private static char[] board;
+	board[0] = X;
+	board[3] = X;
+	board[6] = X;
+	
+	@Test
+	public void Won {
+	
+		assertEquals(true, TicTacToe.CheckWon());
+		
+	}
 	
 }
