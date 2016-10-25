@@ -2,18 +2,35 @@ package is.hr.TicTacToe;
 
 public class TicTacToe {
 	
-	public static final int ROWS = 3, COLS = 3;    
-	public static int[][] board = new int[ROWS][COLS];
+	private static final char empty = ' ';
+	private static final char X = 'x';
+	private static final char O = 'o';
+	private static int currentState; //
+	private static final int COL = 9;
+	private static char[] board = new char[COL];
+	private static boolean PlayerTurn;
 	
 	public void InitGame()
 	{
-    	for (int row = 0; row < ROWS; ++row) 
+    	for (int col = 0; col < COL; ++col) 
 		{
-    		for (int col = 0; col < COLS; ++col) 
-			{
-    				board[row][col] = 0;  
-    		}
+    		board[col] = empty;
 		}
-		//tjekka hvort þetta virki
+		PlayerTurn = false;
+	}
+
+	public void PlayerTurn()
+	{
+		for(int turn = 0; turn < 9; turn++)
+		{
+			if(!PlayerTurn)
+			{
+				System.out.println("Player X, your turn");
+			}
+			else
+			{
+				System.out.println("Player O, your turn");
+			}
+		}
 	}
 }
