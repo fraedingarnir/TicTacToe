@@ -29,69 +29,52 @@ public class TicTacToe {
 
 	public static void PlayerTurn()
 	{
+		char playerSymbol;
+		
 		for(int turn = 0; turn < 9; turn++)
 		{
+			boolean played = false;
 			if(!PlayerTurn)
 			{
-				while(!PlayerTurn)
-				{
-					printBoard();
-					System.out.println("Player X, your turn, pick a value between 1-9");
-					int Value = in.nextInt();
-					if(0 < Value && Value > 10)
-					{
-						if(CheckFilled(Value))
-							;
-						else
-						{
-							board[Value] = X;
-							if(CheckWon())
-							{
-								System.out.println("Congratulations X, you won!");
-								isWon = true;
-							}
-							PlayerTurn = true;
-						}
-
-					}
-					else
-					{
-						System.out.println("Value out of range");
-					}
-				}
-
-
+				playerSymbol = X;
 			}
-			else
+			else 
+				playerSymbol = O;
+			
+			printBoard();
+			while(!played)
 			{
-				while(PlayerTurn)
+				System.out.println("\nPlayer " + playerSymbol + ", your turn, pick a value between 1-9");
+				int Value = in.nextInt();
+				Value--;
+				if(0 <= Value && Value < 9)
 				{
-					printBoard();
-					System.out.println("Player X, your turn, pick a value between 1-9");
-					int Value = in.nextInt();
-					if(0 < Value && Value > 10)
-					{
-						if(CheckFilled(Value))
-							;
-						else
-						{
-							board[Value] = O;
-							if(CheckWon())
-							{
-								System.out.println("Congratulations X, you won!");
-								isWon = true;
 
-							}
-							PlayerTurn = false;
-						}
-
-					}
+					if(CheckFilled(Value))
+						System.out.println("This square has already been played, select another");
 					else
 					{
-						System.out.println("Value out of range");
+						board[Value] = playerSymbol;
+						if(CheckWon())
+						{
+							System.out.println("Congratulations " + playerSymbol + ", you won!");
+							isWon = true;
+							return;
+						}
+						PlayerTurn = !PlayerTurn ;
+						played = true;
 					}
+					
+				}
+				else
+				{
+					System.out.println("Value out of range");
 				}
 			}
+
+
+			
+			
 		}
 	}
 
@@ -124,8 +107,9 @@ public class TicTacToe {
 				{
 					System.out.println("It's a tie!");
 				}
-				System.out.println("Another game? (Y/N)");
-				Play = (char)in.nextInt();
+				Play = 'n';
+				//System.out.println("Another game? (Y/N)");
+				//Play = Character.to(in.nextLine())[0];
 			}
 			
 
@@ -133,24 +117,19 @@ public class TicTacToe {
 
 	private static boolean CheckWon()
 	{        
-		if (board[0] == board[3] && board[3] == board[6] && (board[0] == X || board[0] == O)) 
-            return true;
-        else if (board[3] == board[4] && board[4] == board[5] && (board[3] == X || board[3] == O))
-            return true;
-        else if (board[2] == board[5] && board[5] == board[8] && (board[2] == X || board[2] == O)) 
-            return true;
-        else if (board[0] == board[1] && board[1] == board[2] && (board[0] == X || board[0] == O)) 
-            return true;
-        else if (board[3] == board[4] && board[4] == board[5] && (board[3] == X || board[3] == O)) 
-            return true;
-        else if (board[6] == board[7] && board[7] == board[8] && (board[6] == X || board[6] == O)) 
-            return true;
-        else if (board[0] == board[4] && board[4] == board[8] && (board[0] == X || board[0] == O)) 
-            return true;
-        else if (board[2] == board[4] && board[4] == board[6] && (board[2] == X || board[2] == O)) 
-            return true;
-        else 
-            return false;
+		for(int i = 0; i <= 6; i += 3){
+	        if(board[i] == board[i+1] && board[i+1] == board[i+2]){
+	            return true;
+	        }
+	    }
+		
+		for(int i = 0; i <= 2; i++){
+	        if(board[i] == board[i+3] && board[i+3] == board[i+6]){
+	            return true;
+	        }
+	    }
+		
+		return false;
 	}
 
 	private static boolean CheckFilled(int num)
