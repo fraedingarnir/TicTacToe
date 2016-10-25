@@ -8,6 +8,12 @@ public class TicTacToeTest {
 	
 	public static void main(String args[]) {
     org.junit.runner.JUnitCore.main("is.hr.TicTacToe.TicTacToeTest");
-	
     }
+	
+	
+	@Test
+	public void testEmptyString() {
+		assertEquals("Player X, your turn", TicTacToe.PlayerTurn());
+	}
+	
 }
