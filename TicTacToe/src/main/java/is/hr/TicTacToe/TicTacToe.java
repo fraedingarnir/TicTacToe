@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package is.hr.TicTacToe;
-=======
-package TicTacToe;
->>>>>>> 15eed2654e0ac636956b85d690ef522e97c10fa0
 
 public class TicTacToe {
 	
