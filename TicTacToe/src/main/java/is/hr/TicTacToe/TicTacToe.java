@@ -1,5 +1,7 @@
 package is.hr.TicTacToe;
 
+import java.util.Scanner;
+
 public class TicTacToe {
 	
 	private static final char empty = ' ';
@@ -8,18 +10,20 @@ public class TicTacToe {
 	private static boolean isWon = false; //
 	private static final int COL = 9;
 	private static char[] board;
-	private static boolean PlayerTurn = false;
+	private static boolean PlayerTurn = false; //false for X and true for O
+	private static Scanner in;
 
 	public TicTacToe()
 	{
 			board = new char[COL];
+			in = new Scanner(System.in);	
 	}
 	
-	public static void InitGame()
+	public void InitGame()
 	{
-    	for (int col = 0; col < COL; ++col) 
+    		for (int col = 49; col < 49+COL; ++col) 
 		{
-    		board[col] = empty;
+    			board[col-49] = (char) col;
 		}
 	}
 
@@ -29,35 +33,103 @@ public class TicTacToe {
 		{
 			if(!PlayerTurn)
 			{
-				System.out.println("Player X, your turn");
+				while(!PlayerTurn)
+				{
+					printBoard();
+					System.out.println("Player X, your turn, pick a value between 1-9");
+					int Value = in.nextInt();
+					if(0 < Value && Value > 10)
+					{
+						if(CheckFilled(Value))
+							;
+						else
+						{
+							board[Value] = X;
+							if(CheckWon())
+							{
+								System.out.println("Congratulations X, you won!");
+								isWon = true;
+							}
+							PlayerTurn = true;
+						}
+
+					}
+					else
+					{
+						System.out.println("Value out of range");
+					}
+				}
+
+
 			}
 			else
 			{
-				System.out.println("Player O, your turn");
+				while(PlayerTurn)
+				{
+					printBoard();
+					System.out.println("Player X, your turn, pick a value between 1-9");
+					int Value = in.nextInt();
+					if(0 < Value && Value > 10)
+					{
+						if(CheckFilled(Value))
+							;
+						else
+						{
+							board[Value] = O;
+							if(CheckWon())
+							{
+								System.out.println("Congratulations X, you won!");
+								isWon = true;
+
+							}
+							PlayerTurn = false;
+						}
+
+					}
+					else
+					{
+						System.out.println("Value out of range");
+					}
+				}
 			}
 		}
 	}
 
-	public void printBoard()
+	public static void printBoard()
 	{
 		int line = 0;
 		for(int row = 0; row < 3; row++){
 			for(int col = line; col < line+3; col++)
-				if(col%3 != 0)
-					System.out.print(board[col] + " | ");
+			{
+				System.out.print(" " + board[col]);
+				if(col != 2 && col != 5 && col != 8 || col == 0)
+					System.out.print(" |");
+			}
+			
 			if(row != 2)
-				System.out.println("\n--|---|--");
+				System.out.println("\n---|---|---");
 			line += 3;
 		}
 
 	}
-	/*
+	
 	public static void main(String[] args) {
 			TicTacToe ttt = new TicTacToe();
-			ttt.InitGame();
-			ttt.printBoard();
+			char Play = 'Y';
+			while(Play == 'Y' || Play == 'y')
+			{
+				ttt.InitGame();
+				ttt.PlayerTurn();
+				if(!isWon)
+				{
+					System.out.println("It's a tie!");
+				}
+				System.out.println("Another game? (Y/N)");
+				Play = (char)in.nextInt();
+			}
+			
+
 	}
-		*/
 
 	private static boolean CheckWon()
 	{        
@@ -79,6 +151,14 @@ public class TicTacToe {
             return true;
         else 
             return false;
+	}
+
+	private static boolean CheckFilled(int num)
+	{
+		if(board[num] == X || board[num] == O)
+			return true;
+		else
+			return false;
 	}
 }
 
