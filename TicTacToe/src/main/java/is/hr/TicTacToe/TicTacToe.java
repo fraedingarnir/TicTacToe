@@ -1,4 +1,4 @@
-ckage TicTacToe;
+package is.hr.TicTacToe;
 
 public class TicTacToe {
 	
