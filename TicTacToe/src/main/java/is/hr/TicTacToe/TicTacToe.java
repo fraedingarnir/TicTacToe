@@ -9,7 +9,6 @@ public class TicTacToe {
 	private static final int COL = 9;
 	private static char[] board = new char[COL];
 	private static boolean PlayerTurn;
-	private static int player;
 	
 	public void InitGame()
 	{
@@ -24,11 +23,11 @@ public class TicTacToe {
 	{
 		for(int turn = 0; turn < 9; turn++)
 		{
-			if(player == 0)
+			if(PlayerTurn == 0)
 			{
 				System.out.println("Player X, your turn");
 			}
-			if(player == 1)
+			if(PlayerTurn == 1)
 			{
 				System.out.println("Player X, your turn");
 			}
