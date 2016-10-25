@@ -24,7 +24,6 @@ public class TicTacToe {
 		{
     			board[col-49] = (char) col;
 		}
-		PlayerTurn = false;
 	}
 
 	public static void PlayerTurn()
