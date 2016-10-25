@@ -1,4 +1,4 @@
-ckage TicTacToe;
+package TicTacToe;
 
 public class TicTacToe {
 	
@@ -7,12 +7,12 @@ public class TicTacToe {
 	
 	public void InitGame()
 	{
-    		for (int row = 0; row < ROWS; ++row) 
+    	for (int row = 0; row < ROWS; ++row) 
 		{
-    			for (int col = 0; col < COLS; ++col) 
+    		for (int col = 0; col < COLS; ++col) 
 			{
     				board[row][col] = 0;  
-    			}
+    		}
 		}
 	}
 }
