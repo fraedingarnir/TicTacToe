@@ -23,13 +23,13 @@ public class TicTacToe {
 	{
 		for(int turn = 0; turn < 9; turn++)
 		{
-			if(PlayerTurn == 0)
+			if(!PlayerTurn)
 			{
 				System.out.println("Player X, your turn");
 			}
-			if(PlayerTurn == 1)
+			else
 			{
-				System.out.println("Player X, your turn");
+				System.out.println("Player O, your turn");
 			}
 		}
 	}
