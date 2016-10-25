@@ -14,5 +14,6 @@ public class TicTacToe {
     				board[row][col] = 0;  
     		}
 		}
+		//tjekka hvort þetta virki
 	}
 }
