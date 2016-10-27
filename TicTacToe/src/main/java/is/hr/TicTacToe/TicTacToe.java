@@ -1,9 +1,10 @@
-package is.hr.TicTacToe;
+package Verkefni1;
 
 import java.util.Scanner;
 
 public class TicTacToe {
 	
+	private static final char empty = ' ';
 	private static final char X = 'x';
 	private static final char O = 'o';
 	private static boolean isWon = false; //
