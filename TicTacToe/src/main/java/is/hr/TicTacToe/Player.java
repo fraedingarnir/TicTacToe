@@ -15,8 +15,13 @@ public class Player {
 	
 	public int addPlay()
 	{
-		System.out.println("Player "+symbol+" your turn, pick a value between 1-9");
+		System.out.println(playerMsg(symbol));
 		int val = in.nextInt();
 		return val;
+	}
+	
+	private static String playerMsg(char symbol)
+	{
+		return ("Player " + symbol + " your turn, pick a value between 1-9");
 	}
 }
