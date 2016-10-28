@@ -17,7 +17,7 @@ public class PlayGame {
 
 		char player = 'X';
 		int turn = 0;
-		while(!board.hasWon())
+		for(; !board.hasWon(turn) && turn < 9; turn++)
 		{
 			if(turn%2 == 0)
 				player = 'X';
@@ -35,12 +35,15 @@ public class PlayGame {
 				else
 					System.out.println("That move is not allowed");
 			}
-
-			turn++;
 		}
 
 		printBoard(board);
-		System.out.println("Congratulations " + player + "! you are the winner!!!");
+
+		if(turn == 9 && !board.hasWon(0))
+			System.out.println("It's a Draw!");
+		else
+			System.out.println("Congratulations " + player + "! you are the winner!!!");
+			
 		
 	}
 

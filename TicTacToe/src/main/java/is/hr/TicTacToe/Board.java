@@ -29,7 +29,7 @@ public class Board
 		return true;
 	}
 
-	public boolean hasWon()
+	public boolean hasWon(int turn)
 	{
 		for(int i = 0; i <= 6; i += 3)
 		{
