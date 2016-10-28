@@ -6,39 +6,45 @@ import org.junit.Test;
 public class BoardTest{
 	
 	@Test
-	public void testPlay5() {
+	public void testPlay5() 
+	{
 		Board b = new Board();
 		assertEquals(true, b.addPlay(5, 'X'));
 	}
 
 	@Test
-	public void testPlay9() {
+	public void testPlay9() 
+	{
 		Board b = new Board();
 		assertEquals(true, b.addPlay(9, 'X'));
 	}
 
 	@Test
-	public void testPlay5Again() {
+	public void testPlay5Again() 
+	{
 		Board b = new Board();
 		b.addPlay(5, 'X');
 		assertEquals(false, b.addPlay(5, 'X'));
 	}
 
 	@Test
-	public void testPlayOoutOfBoundsAbove() {
+	public void testPlayOoutOfBoundsAbove() 
+	{
 		Board b = new Board();
 		assertEquals(false, b.addPlay(10, 'X'));
 	}
 
 
 	@Test
-	public void testPlayOoutOfBoundsBelow() {
+	public void testPlayOoutOfBoundsBelow() 
+	{
 		Board b = new Board();
 		assertEquals(false, b.addPlay(0, 'X'));
 	}	
 
 	@Test
-	public void testWinHorizontalFirst(){
+	public void testWinHorizontalFirst()
+	{
 		Board b = new Board();
 		for(int i = 1; i <= 3; i++)
 		{
@@ -48,7 +54,8 @@ public class BoardTest{
 	}		
 
 	@Test
-	public void testWinHorizontalMiddle(){
+	public void testWinHorizontalMiddle()
+	{
 		Board b = new Board();
 		for(int i = 4; i <= 6; i++)
 		{
@@ -58,7 +65,8 @@ public class BoardTest{
 	}
 
 	@Test
-	public void testWinHorizontalLast(){
+	public void testWinHorizontalLast()
+	{
 		Board b = new Board();
 		for(int i = 7; i <= 9; i++)
 		{
@@ -68,7 +76,8 @@ public class BoardTest{
 	}		
 
 	@Test
-	public void testWinVerticalFirst(){
+	public void testWinVerticalFirst()
+	{
 		Board b = new Board();
 		for(int i = 1; i <= 7; i += 3)
 		{
@@ -78,7 +87,8 @@ public class BoardTest{
 	}	
 
 	@Test
-	public void testWinVerticalMiddle(){
+	public void testWinVerticalMiddle()
+	{
 		Board b = new Board();
 		for(int i = 2; i <= 8; i += 3)
 		{
@@ -88,7 +98,8 @@ public class BoardTest{
 	}
 
 	@Test
-	public void testWinVerticalLast(){
+	public void testWinVerticalLast()
+	{
 		Board b = new Board();
 		for(int i = 3; i <= 9; i += 3)
 		{
@@ -98,7 +109,8 @@ public class BoardTest{
 	}
 
 	@Test		
-	public void testWinDownRight(){
+	public void testWinDownRight()
+	{
 		Board b = new Board();
 		for(int i = 1; i <= 9; i += 4)
 		{
@@ -108,7 +120,8 @@ public class BoardTest{
 	}
 
 	@Test		
-	public void testWinDownLeft(){
+	public void testWinDownLeft()
+	{
 		Board b = new Board();
 		for(int i = 3; i <= 7; i += 2)
 		{
@@ -118,13 +131,15 @@ public class BoardTest{
 	}
 
 	@Test		
-	public void testGetSquareElementUnchanged(){
+	public void testGetSquareElementUnchanged()
+	{
 		Board b = new Board();
 		assertEquals('1', b.getSquareElement(1));
 	}
 	
 	@Test		
-	public void testGetSquareElementChanged(){
+	public void testGetSquareElementChanged()
+	{
 		Board b = new Board();
 		b.addPlay(1, 'X');
 		assertEquals('X', b.getSquareElement(1));
