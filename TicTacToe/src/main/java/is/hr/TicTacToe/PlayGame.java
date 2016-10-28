@@ -1,27 +1,46 @@
 package is.hr.TicTacToe;
 
+import java.util.Scanner;
+
 public class PlayGame {
 	
 	public static void main(String[] args)
 	{
-		Player player1 = new Player('X');
-		Player player2 = new Player('O');
+		//Player player1 = new Player('X');
+		//Player player2 = new Player('O');
 		
 		Board board = new Board();
+
+		Scanner in = new Scanner(System.in);
+
 		//printBoard(board);
 
+		char player = 'X';
+		int turn = 0;
 		while(!board.hasWon())
 		{
-			printBoard(board);
-			System.out.println(player1.playerMsg(player1.symbol));
-			int play = player1.addPlay();
-			board.addPlay(play, player1.symbol);
+			if(turn%2 == 0)
+				player = 'X';
+			else
+				player = 'O';
 
 			printBoard(board);
-			System.out.println(player2.playerMsg(player2.symbol));
-			play = player2.addPlay();
-			board.addPlay(play, player2.symbol);			
+			System.out.println("Player " + player + " your turn, pick a value between 1-9");
+			
+			while(true)
+			{
+				int play = in.nextInt();
+				if(board.addPlay(play, player))
+					break;
+				else
+					System.out.println("That move is not allowed");
+			}
+
+			turn++;
 		}
+
+		printBoard(board);
+		System.out.println("Congratulations " + player + "! you are the winner!!!");
 		
 	}
 
