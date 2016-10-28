@@ -1,6 +1,6 @@
 package is.hr.TicTacToe;
 
-public class Controller {
+public class PlayGame {
 	
 	public static void main(String[] args)
 	{
