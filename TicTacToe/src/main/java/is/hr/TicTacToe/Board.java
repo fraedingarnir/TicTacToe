@@ -46,7 +46,11 @@ public class Board {
         	return true;
         if(board[2] == board[4] && board[4] == board[6])
         	return true;
-        
+
         return false;
+	}
+
+	public char getSquareElement(int n) {
+		return board[n];
 	}
 }
