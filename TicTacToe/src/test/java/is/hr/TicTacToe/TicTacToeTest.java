@@ -29,18 +29,26 @@ public class TicTacToeTest {
 		TicTacToe.
 		
 	}
+	
+	
 	*/
 	
-	private static char[] board;
-	board[0] = X;
-	board[3] = X;
-	board[6] = X;
-	
 	@Test
-	public void Won {
-	
-		assertEquals(true, TicTacToe.CheckWon());
+	public void PlayerSymbol(){
 		
+		Player p1 = new Player('x');
+	
+		assertEquals('x', p1.symbol);
 	}
 	
+	
+	
+	@Test
+	public void PlayerMessage(){
+		
+		//Player p1 = new Player('x');
+	
+		assertEquals("Player x your turn, pick a value between 1-9", Player.playerMsg('x'));
+	}
+
 }

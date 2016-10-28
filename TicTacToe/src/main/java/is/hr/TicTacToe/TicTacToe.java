@@ -1,4 +1,4 @@
-package Verkefni1;
+package is.hr.TicTacToe;
 
 import java.util.Scanner;
 
