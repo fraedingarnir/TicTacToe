@@ -134,7 +134,7 @@ public class BoardTest{
 	public void testGetSquareElementUnchanged()
 	{
 		Board b = new Board();
-		assertEquals('1', b.getSquareElement(1));
+		assertEquals('1', b.getSquareElement(0));
 	}
 	
 	@Test		
