@@ -116,4 +116,17 @@ public class BoardTest{
 		}
 		assertEquals(true, b.hasWon());
 	}
+
+	@Test		
+	public void testGetSquareElementUnchanged(){
+		Board b = new Board();
+		assertEquals('1', b.getSquareElement(1));
+	}
+	
+	@Test		
+	public void testGetSquareElementChanged(){
+		Board b = new Board();
+		b.addPlay(1, 'X');
+		assertEquals('X', b.getSquareElement(1));
+	}
 }

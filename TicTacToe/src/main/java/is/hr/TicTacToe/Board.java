@@ -51,6 +51,6 @@ public class Board {
 	}
 
 	public char getSquareElement(int n) {
-		return board[n];
+		return board[n-1];
 	}
 }
