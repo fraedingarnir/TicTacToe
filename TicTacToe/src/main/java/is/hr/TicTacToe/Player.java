@@ -20,7 +20,7 @@ public class Player {
 		return val;
 	}
 	
-	private static String playerMsg(char symbol)
+	public static String playerMsg(char symbol)
 	{
 		return ("Player " + symbol + " your turn, pick a value between 1-9");
 	}

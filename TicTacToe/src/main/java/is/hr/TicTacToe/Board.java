@@ -1,4 +1,4 @@
-package is.hr.TicTacToe
+package is.hr.TicTacToe;
 public class Board {
 	
 	private static char[] board;
