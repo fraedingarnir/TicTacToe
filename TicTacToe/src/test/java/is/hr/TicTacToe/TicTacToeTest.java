@@ -29,22 +29,26 @@ public class TicTacToeTest {
 		TicTacToe.
 		
 	}
+	
+	
 	*/
 	
 	@Test
 	public void PlayerSymbol(){
 		
+		Player p1 = new Player('x');
+	
+		assertEquals('x', p1.symbol);
+	}
+	
+	
+	
+	@Test
+	public void PlayerMessage(){
+		
 		//Player p1 = new Player('x');
 	
 		assertEquals("Player x your turn, pick a value between 1-9", Player.playerMsg('x'));
 	}
-	
-	
-	/*
-	@Test
-	public void Won {
-	
-		
-	}
-	*/
+
 }
