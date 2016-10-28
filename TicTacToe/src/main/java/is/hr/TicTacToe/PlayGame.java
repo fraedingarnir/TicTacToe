@@ -4,17 +4,25 @@ public class PlayGame {
 	
 	public static void main(String[] args)
 	{
-		//Player player1 = new Player('X');
-		//Player player2 = new Player('O');
+		Player player1 = new Player('X');
+		Player player2 = new Player('O');
 		
 		Board board = new Board();
-		printBoard(board);
-/*
+		//printBoard(board);
+
 		while(!board.hasWon())
 		{
 			printBoard(board);
+			System.out.println(player1.playerMsg(player1.symbol));
+			int play = player1.addPlay();
+			board.addPlay(play, player1.symbol);
+
+			printBoard(board);
+			System.out.println(player2.playerMsg(player2.symbol));
+			play = player2.addPlay();
+			board.addPlay(play, player2.symbol);			
 		}
-		*/
+		
 	}
 
 	private static void printBoard(Board board)
