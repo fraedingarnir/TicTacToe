@@ -15,8 +15,14 @@ public class Player {
 	
 	public int addPlay()
 	{
-		System.out.println(playerMsg(symbol));
-		int val = in.nextInt();
+		int val;
+		do{
+			System.out.println(playerMsg(symbol));
+			
+			val = in.nextInt();
+			
+		}while(val > 9 || val < 1);
+				
 		return val;
 	}
 	
