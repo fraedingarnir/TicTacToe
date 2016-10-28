@@ -142,6 +142,6 @@ public class BoardTest{
 	{
 		Board b = new Board();
 		b.addPlay(1, 'X');
-		assertEquals('X', b.getSquareElement(1));
+		assertEquals('X', b.getSquareElement(0));
 	}
 }
