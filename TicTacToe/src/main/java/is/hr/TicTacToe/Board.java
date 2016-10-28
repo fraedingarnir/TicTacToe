@@ -30,15 +30,17 @@ public class Board {
 
 	public boolean hasWon()
 	{
-		for(int i = 0; i < 6; i += 3){
+		for(int i = 0; i <= 6; i += 3){
 			if(board[i] == board[i+1] && board[i+1] == board[i+2]){
 				return true;
+			}
 		}
 
 		for(int i = 0; i <= 2; i++){
 	        if(board[i] == board[i+3] && board[i+3] == board[i+6]){
 	            return true;
         	}
-    	}
+        }
+        return false;
 	}
 }

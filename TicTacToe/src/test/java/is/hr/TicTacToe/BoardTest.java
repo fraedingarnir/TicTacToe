@@ -12,6 +12,12 @@ public class BoardTest{
 	}
 
 	@Test
+	public void testPlay9() {
+		Board b = new Board();
+		assertEquals(true, b.addPlay(9, 'X'));
+	}
+
+	@Test
 	public void testPlay5Again() {
 		Board b = new Board();
 		b.addPlay(5, 'X');
@@ -29,5 +35,65 @@ public class BoardTest{
 	public void testPlayOoutOfBoundsBelow() {
 		Board b = new Board();
 		assertEquals(false, b.addPlay(0, 'X'));
-	}				
+	}	
+
+	@Test
+	public void testWinHorizontalFirst(){
+		Board b = new Board();
+		for(int i = 1; i <= 3; i++)
+		{
+			b.addPlay(i, 'X');
+		}
+		assertEquals(true, b.hasWon());
+	}		
+
+	@Test
+	public void testWinHorizontalMiddle(){
+		Board b = new Board();
+		for(int i = 4; i <= 6; i++)
+		{
+			b.addPlay(i, 'O');
+		}
+		assertEquals(true, b.hasWon());
+	}
+
+	@Test
+	public void testWinHorizontalLast(){
+		Board b = new Board();
+		for(int i = 7; i <= 9; i++)
+		{
+			b.addPlay(i, 'X');
+		}
+		assertEquals(true, b.hasWon());
+	}		
+
+	@Test
+	public void testWinVerticalFirst(){
+		Board b = new Board();
+		for(int i = 1; i <= 7; i += 3)
+		{
+			b.addPlay(i, 'X');
+		}
+		assertEquals(true, b.hasWon());
+	}	
+
+	@Test
+	public void testWinVerticalMiddle(){
+		Board b = new Board();
+		for(int i = 2; i <= 8; i += 3)
+		{
+			b.addPlay(i, 'O');
+		}
+		assertEquals(true, b.hasWon());
+	}
+
+	@Test
+	public void testWinVerticalLast(){
+		Board b = new Board();
+		for(int i = 3; i <= 9; i += 3)
+		{
+			b.addPlay(i, 'X');
+		}
+		assertEquals(true, b.hasWon());
+	}		
 }
