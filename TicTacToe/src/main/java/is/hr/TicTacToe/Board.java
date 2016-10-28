@@ -1,6 +1,7 @@
 package is.hr.TicTacToe;
 
-public class Board {
+public class Board 
+{
 	private static char[] board;
 
 	public Board()
@@ -30,14 +31,18 @@ public class Board {
 
 	public boolean hasWon()
 	{
-		for(int i = 0; i <= 6; i += 3){
-			if(board[i] == board[i+1] && board[i+1] == board[i+2]){
+		for(int i = 0; i <= 6; i += 3)
+		{
+			if(board[i] == board[i+1] && board[i+1] == board[i+2])
+			{
 				return true;
 			}
 		}
 
-		for(int i = 0; i <= 2; i++){
-	        if(board[i] == board[i+3] && board[i+3] == board[i+6]){
+		for(int i = 0; i <= 2; i++)
+		{
+	        if(board[i] == board[i+3] && board[i+3] == board[i+6])
+	        {
 	            return true;
         	}
         }
@@ -50,7 +55,8 @@ public class Board {
         return false;
 	}
 
-	public char getSquareElement(int n) {
+	public char getSquareElement(int n) 
+	{
 		return board[n-1];
 	}
 }
