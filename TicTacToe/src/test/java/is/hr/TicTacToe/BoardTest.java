@@ -95,5 +95,25 @@ public class BoardTest{
 			b.addPlay(i, 'X');
 		}
 		assertEquals(true, b.hasWon());
-	}		
+	}
+
+	@Test		
+	public void testWinDownRight(){
+		Board b = new Board();
+		for(int i = 1; i <= 9; i += 4)
+		{
+			b.addPlay(i, 'X');
+		}
+		assertEquals(true, b.hasWon());
+	}
+
+	@Test		
+	public void testWinDownLeft(){
+		Board b = new Board();
+		for(int i = 3; i <= 7; i += 2)
+		{
+			b.addPlay(i, 'X');
+		}
+		assertEquals(true, b.hasWon());
+	}
 }
