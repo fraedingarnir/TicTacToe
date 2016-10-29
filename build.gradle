@@ -33,6 +33,9 @@ dependencies {
     standardInput = System.in
 	}
 }
+task stage{
+	dependsOn installDist
+}
 jar {
     manifest {
                 attributes("Main-Class": "is.hr.TicTacToe.PlayGame")
