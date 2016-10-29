@@ -1,7 +1,7 @@
 language: java
 script:
   - ./gradlew check
-  - bash  grip docs/designreport.md --export docs/design.html
+ # - bash  grip docs/designreport.md --export docs/design.html
  	
 jdk:
   - oraclejdk8
