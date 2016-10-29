@@ -10,6 +10,12 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'jacoco'
+
+version = '0.0.1'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 
 mainClassName = 'is.hr.TicTacToe.PlayGame'
 // In this section you declare where to find the dependencies of your project
@@ -36,6 +42,18 @@ dependencies {
 task stage{
 	dependsOn installDist
 }
+
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+check.dependsOn jacocoTestReport
+
+
 jar {
     manifest {
                 attributes("Main-Class": "is.hr.TicTacToe.PlayGame")
