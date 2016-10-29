@@ -1,16 +1,15 @@
 package is.hr.TicTacToe;
 
-/*
+
 import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
-*/
-/*
+
 public class TicTacToeWeb implements SparkApplication{
 	
 	    public static void main(String[] args) {
         staticFileLocation("/public");
-        SparkApplication TicWeb = new ChuckWeb();
+        SparkApplication TicWeb = new TicTacToeWeb();
 
         String port = System.getenv("PORT");
         if (port != null) {
@@ -28,5 +27,3 @@ public class TicTacToeWeb implements SparkApplication{
 		
     }
 }
-
-*/
