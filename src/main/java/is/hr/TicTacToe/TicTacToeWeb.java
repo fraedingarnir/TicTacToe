@@ -1,5 +1,5 @@
 package is.hr.TicTacToe;
-
+/*
 import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
@@ -25,4 +25,9 @@ public class TicTacToeWeb implements SparkApplication{
         post("/play", (req, res) -> Board.addPlay(req.queryParams("id"), req.queryParams("symbol"));
 		
     }
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 400b8d05839ad1d208f1887a4b0789227488c900
 }
+*/
