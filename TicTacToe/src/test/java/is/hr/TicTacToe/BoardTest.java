@@ -50,7 +50,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'X');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}		
 
 	@Test
@@ -61,7 +61,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'O');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}
 
 	@Test
@@ -72,7 +72,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'X');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}		
 
 	@Test
@@ -83,7 +83,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'X');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}	
 
 	@Test
@@ -94,7 +94,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'O');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}
 
 	@Test
@@ -105,7 +105,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'X');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}
 
 	@Test		
@@ -116,7 +116,7 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'X');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
 	}
 
 	@Test		
@@ -127,7 +127,14 @@ public class BoardTest{
 		{
 			b.addPlay(i, 'X');
 		}
-		assertEquals(true, b.hasWon());
+		assertEquals(true, b.hasWon(3));
+	}
+
+	@Test		
+	public void testWinDraw()
+	{
+		Board b = new Board();
+		assertEquals(false, b.hasWon(9));
 	}
 
 	@Test		
