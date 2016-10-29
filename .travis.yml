@@ -1,6 +1,6 @@
 language: java
 script:
-  - /TicTacToe./gradlew check
+  - ./TicTacToe/gradlew check
 jdk:
   - oraclejdk8
 
