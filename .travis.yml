@@ -1,6 +1,7 @@
 language: java
 script:
   - ./gradlew check
+   && grip designreport.md --export design.pdf
 jdk:
   - oraclejdk8
 
