@@ -1,5 +1,3 @@
-Package is.ru.TicTacToe
+package is.hr.TicTacToe;
 
 
-import spark.*;
-import spark.servlet.SparkApplicato
