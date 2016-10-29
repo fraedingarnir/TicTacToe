@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.hr.TicTacToe.BoardTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2016-10-28T16:36:32" hostname="i-1217c9a8.cs1004cloud.internal" time="0.008">
+<testsuite name="is.hr.TicTacToe.BoardTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2016-10-29T11:28:48" hostname="i-1217c9a8.cs1004cloud.internal" time="0.025">
   <properties/>
   <testcase name="testWinHorizontalLast" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
   <testcase name="testWinDownRight" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
@@ -9,12 +9,13 @@
   <testcase name="testWinVerticalLast" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testWinHorizontalMiddle" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testPlay5Again" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinHorizontalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
+  <testcase name="testWinHorizontalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
   <testcase name="testPlayOoutOfBoundsAbove" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testPlayOoutOfBoundsBelow" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinDownLeft" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
+  <testcase name="testPlayOoutOfBoundsBelow" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
+  <testcase name="testWinDraw" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
+  <testcase name="testWinDownLeft" classname="is.hr.TicTacToe.BoardTest" time="0.004"/>
   <testcase name="testWinVerticalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testGetSquareElementUnchanged" classname="is.hr.TicTacToe.BoardTest" time="0.003"/>
+  <testcase name="testGetSquareElementUnchanged" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testGetSquareElementChanged" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
