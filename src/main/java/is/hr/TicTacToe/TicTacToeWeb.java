@@ -1,3 +1,3 @@
-Package is.hr.TicTacToe
+package is.hr.TicTacToe;
 
 
