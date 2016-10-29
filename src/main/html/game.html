@@ -13,19 +13,19 @@
 		
         <table>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id ="1"></td>
+                <td id ="2"></td>
+                <td id ="3"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id ="4"></td>
+                <td id ="5"></td>
+                <td id ="6"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
             </tr>
         </table>
 		
@@ -36,21 +36,13 @@
         <script>
         $(document).ready(function() {
             var form = $('form');
-            form.submit(function( event ) {
-                var firstName = $("#firstName").val();
-                var lastName = $("#lastName").val();
-                $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action'),
-                    data: 'firstName=' + firstName + '&lastName=' + lastName
-                }).done(function() {
-                    $('#results').html('Name set as: ' + firstName + ' ' +
-                        lastName + '.').attr('class', 'alert alert-success');
-                }).fail(function() {
-                    $('#results').html('Unable to set name...').attr('class', 'alert alert-danger');
-                });
-                event.preventDefault();
-            });
+			
+			$("tr").click(function() {
+				var box = $("#id");
+				var player = $("X");
+				alert("test");
+		}	);
+			
         });
         </script>
     </body>
