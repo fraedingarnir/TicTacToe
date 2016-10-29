@@ -22,17 +22,12 @@ public class TicTacToeWeb implements SparkApplication{
     public void init() {
         final Board board = new Board();
 		
-        post("/play", (req, res) -> Board.addPlay("id", "symbol"));
-        post("/id", (req, res) -> chuck.getById(req.queryParams("id")));
-        post("/setName", (req, res) -> {
-            chuck.alterName(
-                req.queryParams("firstName"),
-                req.queryParams("lastName")
-            );          
-            res.status(200);
-            return res;
-        });
+        post("/play", (req, res) -> Board.addPlay(req.queryParams("id"), req.queryParams("symbol"));
+		
     }
+<<<<<<< HEAD
+=======
 	
+>>>>>>> 400b8d05839ad1d208f1887a4b0789227488c900
 }
 */
