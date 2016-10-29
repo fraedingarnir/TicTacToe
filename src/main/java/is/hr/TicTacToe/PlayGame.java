@@ -24,7 +24,7 @@ public class PlayGame {
 			else
 				player = 'O';
 
-			printBoard(board);
+			System.out.println(printBoard(board));
 			System.out.println("Player " + player + " your turn, pick a value between 1-9");
 			
 			while(true)
@@ -37,7 +37,7 @@ public class PlayGame {
 			}
 		}
 
-		printBoard(board);
+		System.out.println(printBoard(board));
 
 		if(turn == 9 && !board.hasWon())
 			System.out.println("It's a Draw!");
@@ -47,23 +47,24 @@ public class PlayGame {
 		
 	}
 
-	private static void printBoard(Board board)
+	private static String printBoard(Board board)
 	{
+		String result = "";
 		int line = 0;
         for(int row = 0; row < 3; row++)
         {
                 for(int col = line; col < line+3; col++)
                 {
-                        System.out.print(" " + board.getSquareElement(col));
+                        result += (" " + board.getSquareElement(col));
                         if(col != 2 && col != 5 && col != 8 || col == 0)
-                                System.out.print(" |");
+                                result += (" |");
                 }
 
                 if(row != 2)
-                        System.out.println("\n---|---|---");
+                        result += ("\n---|---|---\n");
                 line += 3;
         }
-        System.out.println();
+        return result;
 	}
 
 
