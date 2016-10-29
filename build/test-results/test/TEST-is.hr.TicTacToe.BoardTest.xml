@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.hr.TicTacToe.BoardTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2016-10-29T16:05:32" hostname="i-1217c9a8.cs1004cloud.internal" time="0.016">
+<testsuite name="is.hr.TicTacToe.BoardTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2016-10-29T16:27:03" hostname="i-1217c9a8.cs1004cloud.internal" time="0.034">
   <properties/>
   <testcase name="testWinHorizontalLast" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
   <testcase name="testWinDownRight" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinVerticalMiddle" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
+  <testcase name="testWinVerticalMiddle" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
   <testcase name="testPlay5" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testPlay9" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinVerticalLast" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinHorizontalMiddle" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
+  <testcase name="testWinVerticalLast" classname="is.hr.TicTacToe.BoardTest" time="0.002"/>
+  <testcase name="testWinHorizontalMiddle" classname="is.hr.TicTacToe.BoardTest" time="0.002"/>
   <testcase name="testPlay5Again" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinHorizontalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
+  <testcase name="testWinHorizontalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
   <testcase name="testPlayOoutOfBoundsAbove" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testPlayOoutOfBoundsBelow" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
+  <testcase name="testPlayOoutOfBoundsBelow" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testWinDraw" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
-  <testcase name="testWinDownLeft" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
-  <testcase name="testWinVerticalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.001"/>
+  <testcase name="testWinDownLeft" classname="is.hr.TicTacToe.BoardTest" time="0.011"/>
+  <testcase name="testWinVerticalFirst" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testGetSquareElementUnchanged" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <testcase name="testGetSquareElementChanged" classname="is.hr.TicTacToe.BoardTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

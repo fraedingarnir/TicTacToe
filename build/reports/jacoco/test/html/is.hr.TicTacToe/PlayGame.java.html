@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 <span class="nc" id="L18">		char player = 'X';</span>
 <span class="nc" id="L19">		int turn = 0;</span>
-<span class="nc bnc" id="L20" title="All 4 branches missed.">		for(; !board.hasWon(turn) &amp;&amp; turn &lt; 9; turn++)</span>
+<span class="nc bnc" id="L20" title="All 4 branches missed.">		for(; !board.hasWon() &amp;&amp; turn &lt; 9; turn++)</span>
 		{
 <span class="nc bnc" id="L22" title="All 2 branches missed.">			if(turn%2 == 0)</span>
 <span class="nc" id="L23">				player = 'X';</span>
@@ -39,7 +39,7 @@ import java.util.Scanner;
 
 <span class="nc" id="L40">		printBoard(board);</span>
 
-<span class="nc bnc" id="L42" title="All 4 branches missed.">		if(turn == 9 &amp;&amp; !board.hasWon(0))</span>
+<span class="nc bnc" id="L42" title="All 4 branches missed.">		if(turn == 9 &amp;&amp; !board.hasWon())</span>
 <span class="nc" id="L43">			System.out.println(&quot;It's a Draw!&quot;);</span>
 		else
 <span class="nc" id="L45">			System.out.println(&quot;Congratulations &quot; + player + &quot;! you are the winner!!!&quot;);</span>
