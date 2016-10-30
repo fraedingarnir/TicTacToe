@@ -75,6 +75,15 @@
 			
 			$('#one').submit(function( event ) {
 			
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
+				
 				var theurl = "/addplay0o";
 				if(player == 'X')
 				{
@@ -91,14 +100,6 @@
                 });
                 event.preventDefault();
 				
-				if(player == 'X')
-				{
-					player = 'O';
-				}
-				else
-				{
-					player = 'X';
-				}
 				document.getElementById("btn1").disabled = true; 
             });
 			

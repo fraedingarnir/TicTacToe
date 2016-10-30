@@ -75,10 +75,15 @@
 			
 			$('#one').submit(function( event ) {
 			
+				var theurl = "/addplay0o";
+				if(player == 'X')
+				{
+					theurl = "/addplay0x";
+				}
                 $.ajax({
                     type: $('#one').attr('method'),
-                    url: $('#one').attr('action'),
-                    data: 'input=' + player + '&symbol=' + 0
+                    url: theurl,
+                    data: null
                 }).done(function(val) {
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
                 }).fail(function() {
