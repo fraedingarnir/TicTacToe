@@ -1,0 +1,5 @@
+#!/bin/bash
+
+grip docs/DevReport.md --export
+grip docs/designreport.md --export
+grip docs/AdminManual.md --export

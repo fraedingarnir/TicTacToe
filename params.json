@@ -1,0 +1,6 @@
+{
+  "name": "Tictactoe",
+  "tagline": "",
+  "body": "TicTacToe\r\n===================\r\nby Fræðingarnir\r\n---------------------\r\nTravis: [![Build Status](https://travis-ci.org/fraedingarnir/TicTacToe.svg?branch=master)](https://travis-ci.org/fraedingarnir/TicTacToe)\r\n\r\n\r\nCodeCoverage: [![codecov](https://codecov.io/gh/fraedingarnir/TicTacToe/branch/master/graph/badge.svg)](https://codecov.io/gh/fraedingarnir/TicTacToe)\r\n\r\n##Authors\r\n* Alex Kári Ívarsson\r\n* Arnar Jóhannsson\r\n* Egill Örn Benediktsson\r\n* Hjálmar Diego Arnórsson\r\n* Jón Heiðar Sigmundsson\r\n\r\n##About\r\nThis project was implemented for late-term assignment in Hugbúnaðarfræði. It's a web and console based application of the classic game, TicTacToe. The game can be played on the [web](https://tictactoefraedingarnir.herokuapp.com/) or by installing it on your local machine. Enjoy!\r\n\r\n##Manuals\r\n* [Design Report](docs/designreport.md)\r\n* [Development Manual](docs/DevReport.md)\r\n* [Administration Manual](docs/AdminManual.md)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
