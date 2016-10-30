@@ -80,7 +80,6 @@
 			
 			var player = 'O';
 			
-			
 			$('#one').submit(function( event ) {
 			
 				if(player == 'X')
@@ -97,20 +96,28 @@
 				{
 					theurl = "/addplay0x";
 				}
-				
                 $.ajax({
                     type: $('#one').attr('method'),
                     url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
-					
-			});
                 }).fail(function() {
                     $('#btn1').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
 				
+				$.ajax({
+                    type: $('#one').attr('method'),
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					alert(val);
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn1").disabled = true; 
             });
 			
@@ -321,7 +328,6 @@
 				{
 					theurl = "/addplay7x";
 				}
-				
                 $.ajax({
                     type: $('#eight').attr('method'),
                     url: theurl,
