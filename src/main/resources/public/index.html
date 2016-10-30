@@ -52,11 +52,14 @@
 
         <!-- Ajax down below -->
         <script>
+		
+		function btn1(clicked_id)
+		{
+			alert(clicked_id);
+		}
+		
         $(document).ready(function() {
-			function btn1(clicked_id)
-			{
-				alert(clicked_id);
-			}
+			
 			
 			submit(function( event ) {
 				var form = $(this).closest("form");
