@@ -20,4 +20,4 @@ This project was implemented for late-term assignment in Hugbúnaðarfræði. It
 ##Manuals
 * [Design Report](docs/designreport.md)
 * [Development Manual](docs/DevReport.md)
-* [Administation Manual](docs/AdminReport.md)
+* [Administation Manual](docs/AdminManual.md)
