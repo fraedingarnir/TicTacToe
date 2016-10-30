@@ -31,13 +31,9 @@ import spark.servlet.SparkApplication;
 <span class="nc" id="L31">		System.out.println(&quot;virkar3&quot;);</span>
 <span class="nc" id="L32">		board.addPlay(1,'X');</span>
 <span class="nc" id="L33">		System.out.println(board.getSquareElement(1));</span>
-<span class="nc" id="L34">		post(&quot;/play&quot;, (req, res) -&gt; {</span>
-			//Board.addPlay(req.queryParams(&quot;id&quot;), req.queryParams(&quot;symbol&quot;));
 		
-<span class="nc" id="L37">		res.status(200);</span>
-<span class="nc" id="L38">		return res;</span>
-		});
+		//post(&quot;/play&quot;, (req, res) -&gt; Board.addPlay(req.queryParams(&quot;id&quot;), req.queryParams(&quot;symbol&quot;)));
 	   
-<span class="nc" id="L41">    }</span>
+<span class="nc" id="L37">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
