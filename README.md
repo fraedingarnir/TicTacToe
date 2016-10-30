@@ -2,7 +2,7 @@ TicTacToe
 ===================
 by Fræðingarnir
 ---------------------
-Travis Build: [![Build Status](https://travis-ci.org/fraedingarnir/TicTacToe.svg?branch=master)](https://travis-ci.org/fraedingarnir/TicTacToe)
+Travis: [![Build Status](https://travis-ci.org/fraedingarnir/TicTacToe.svg?branch=master)](https://travis-ci.org/fraedingarnir/TicTacToe)
 
 
 CodeCoverage: [![codecov](https://codecov.io/gh/fraedingarnir/TicTacToe/branch/master/graph/badge.svg)](https://codecov.io/gh/fraedingarnir/TicTacToe)
@@ -13,4 +13,6 @@ CodeCoverage: [![codecov](https://codecov.io/gh/fraedingarnir/TicTacToe/branch/m
 * Hjálmar Diego Arnórsson
 * Jón Heiðar Sigmundsson
 
-
+##Manuals
+* [Design Report](docs/designreport.md)
+* [Development Manual](docs/DevReport.md)
