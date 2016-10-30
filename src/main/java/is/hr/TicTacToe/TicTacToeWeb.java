@@ -31,7 +31,12 @@ public class TicTacToeWeb implements SparkApplication{
 		System.out.println("virkar3");
 		board.addPlay(1,'X');
 		System.out.println(board.getSquareElement(1));
-       // post("/play", (req, res) -> Board.addPlay(req.queryParams("id"), req.queryParams("symbol")));
+		post("/play", (req, res) -> {
+			//Board.addPlay(req.queryParams("id"), req.queryParams("symbol"));
+		
+		res.status(200);
+		return res;
+		});
 	   
     }
 }
