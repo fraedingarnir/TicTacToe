@@ -54,7 +54,7 @@
             var form = $('form');
 			
 			form.submit(function( event ) {
-				var id = $(this.id);
+				 var id = $(this).closest("form").attr("id");
                 $.ajax({
                     type: form.attr('method'),
                     url: form.attr('action'),
