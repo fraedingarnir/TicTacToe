@@ -8,7 +8,7 @@ import spark.servlet.SparkApplication;
 public class TicTacToeWeb implements SparkApplication{
 	
 	    public static void main(String[] args) {
-        staticFileLocation("/public");
+        /*staticFileLocation("/public");
         SparkApplication TicWeb = new TicTacToeWeb();
 
         String port = System.getenv("PORT");
@@ -16,7 +16,7 @@ public class TicTacToeWeb implements SparkApplication{
             port(Integer.valueOf(port));
         }
 
-        TicWeb.init();
+        TicWeb.init();*/
     }
 	
 	@Override
