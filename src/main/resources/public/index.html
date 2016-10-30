@@ -13,23 +13,23 @@
 		
         <table>
             <tr>
-                <td id ="1">
+                <td>
 					<form id ="one" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn1">getvalue</button>
+					<button type="submit" id="btn1">1</button>
 					</form>
 				</td>
-                <td id ="2">2</td>
-                <td id ="3">3</td>
+                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
-                <td id ="4">4</td>
-                <td id ="5">5</td>
-                <td id ="6">6</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
             </tr>
             <tr>
-                <td id="7">7</td>
-                <td id="8">8</td>
-                <td id="9">9</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
             </tr>
         </table>
         <!-- Load jquery -->
@@ -44,20 +44,13 @@
                     type: $('#one').attr('method'),
                     url: $('#one').attr('action'),
                     data: null
-                }).done(function(joke) {
-                    $('#btn1').html(joke).attr('class', 'alert alert-success');
+                }).done(function(val) {
+                    $('#btn1').html(val).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#btn1').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                    $('#btn1').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
-			
-			$("tr").click(function() {
-				var box = $("#id");
-				var player = $("X");
-				alert("test");
-		});
-			
         });
         </script>
     </body>
