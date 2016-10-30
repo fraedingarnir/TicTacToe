@@ -75,10 +75,24 @@
 			
 			$('#one').submit(function( event ) {
 			
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
+				
+				var theurl = "/addplay0o";
+				if(player == 'X')
+				{
+					theurl = "/addplay0x";
+				}
                 $.ajax({
                     type: $('#one').attr('method'),
-                    url: $('#one').attr('action'),
-                    data: 'input=' + player + '&symbol=' + 0
+                    url: theurl,
+                    data: null
                 }).done(function(val) {
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
                 }).fail(function() {
@@ -86,6 +100,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn1").disabled = true; 
+            });
+			
+			$('#two').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -94,13 +113,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn1").disabled = true; 
-            });
-			
-			$('#two').submit(function( event ) {
+				
+				var theurl = "/addplay1o";
+				if(player == 'X')
+				{
+					theurl = "/addplay1x";
+				}
                 $.ajax({
                     type: $('#two').attr('method'),
-                    url: $('#two').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn2').html(player).attr('class', 'btn-default disabled');
@@ -108,7 +129,11 @@
                     $('#btn2').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				document.getElementById("btn2").disabled = true; 
+            });
+			
+			$('#three').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -117,13 +142,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn2").disabled = true; 
-            });
-			
-			$('#three').submit(function( event ) {
+				
+				var theurl = "/addplay2o";
+				if(player == 'X')
+				{
+					theurl = "/addplay2x";
+				}
                 $.ajax({
                     type: $('#three').attr('method'),
-                    url: $('#three').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn3').html(player).attr('class', 'btn-default disabled');
@@ -132,6 +159,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn3").disabled = true; 
+            });
+			
+			$('#four').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -140,13 +172,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn3").disabled = true; 
-            });
-			
-			$('#four').submit(function( event ) {
+				
+				var theurl = "/addplay3o";
+				if(player == 'X')
+				{
+					theurl = "/addplay3x";
+				}
                 $.ajax({
                     type: $('#four').attr('method'),
-                    url: $('#four').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn4').html(player).attr('class', 'btn-default disabled');
@@ -155,6 +189,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn4").disabled = true; 
+            });
+			
+			$('#five').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -163,13 +202,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn4").disabled = true; 
-            });
-			
-			$('#five').submit(function( event ) {
+				
+				var theurl = "/addplay4o";
+				if(player == 'X')
+				{
+					theurl = "/addplay4x";
+				}
                 $.ajax({
                     type: $('#five').attr('method'),
-                    url: $('#five').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn5').html(player).attr('class', 'btn-default disabled');
@@ -177,7 +218,12 @@
                     $('#btn5').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+			
+				document.getElementById("btn5").disabled = true; 
+            });
+			
+			$('#six').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -186,13 +232,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn5").disabled = true; 
-            });
-			
-			$('#six').submit(function( event ) {
+				
+				var theurl = "/addplay5o";
+				if(player == 'X')
+				{
+					theurl = "/addplay5x";
+				}
                 $.ajax({
                     type: $('#six').attr('method'),
-                    url: $('#six').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn6').html(player).attr('class', 'btn-default disabled');
@@ -201,6 +249,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn6").disabled = true; 
+            });
+			
+			$('#seven').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -209,13 +262,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn6").disabled = true; 
-            });
-			
-			$('#seven').submit(function( event ) {
+				
+				var theurl = "/addplay6o";
+				if(player == 'X')
+				{
+					theurl = "/addplay6x";
+				}
                 $.ajax({
                     type: $('#seven').attr('method'),
-                    url: $('#seven').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn7').html(player).attr('class', 'btn-default disabled');
@@ -224,6 +279,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn7").disabled = true; 
+            });
+			
+			$('#eight').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -232,13 +292,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn7").disabled = true; 
-            });
-			
-			$('#eight').submit(function( event ) {
+				
+				var theurl = "/addplay7o";
+				if(player == 'X')
+				{
+					theurl = "/addplay7x";
+				}
                 $.ajax({
                     type: $('#eight').attr('method'),
-                    url: $('#eight').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn8').html(player).attr('class', 'btn-default disabled');
@@ -247,6 +309,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn8").disabled = true; 
+            });
+			
+			$('#nine').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -255,13 +322,15 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn8").disabled = true; 
-            });
-			
-			$('#nine').submit(function( event ) {
+				
+				var theurl = "/addplay8o";
+				if(player == 'X')
+				{
+					theurl = "/addplay8x";
+				}
                 $.ajax({
                     type: $('#nine').attr('method'),
-                    url: $('#nine').attr('action'),
+                    url: theurl,
                     data: null
                 }).done(function(val) {
                     $('#btn9').html(player).attr('class', 'btn-default disabled');
@@ -270,14 +339,6 @@
                 });
                 event.preventDefault();
 				
-				if(player == 'X')
-				{
-					player = 'O';
-				}
-				else
-				{
-					player = 'X';
-				}
 				document.getElementById("btn9").disabled = true; 
             });
         });

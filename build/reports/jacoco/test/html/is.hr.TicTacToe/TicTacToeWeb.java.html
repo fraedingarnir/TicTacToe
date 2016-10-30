@@ -22,16 +22,42 @@ import spark.servlet.SparkApplication;
     public void init() {
 <span class="nc" id="L23">        final Board board = new Board();</span>
 		
-<span class="nc" id="L25">		post(&quot;/getvalue&quot;, (req, res) -&gt; board.getSquareElement(1));</span>
+<span class="nc" id="L25">		post(&quot;/haswon&quot;, (req, res) -&gt; board.hasWon());</span>
 		
-<span class="nc" id="L27">		post(&quot;/addplay&quot;, (req, res) -&gt; Board.addPlay(0,'X'));</span>
-<span class="nc" id="L28">		post(&quot;/play&quot;, (req, res) -&gt; {</span>
+<span class="nc" id="L27">		post(&quot;/addplay0x&quot;, (req, res) -&gt; Board.addPlay(0,'X'));</span>
+<span class="nc" id="L28">		post(&quot;/addplay0o&quot;, (req, res) -&gt; Board.addPlay(0,'O'));</span>
+		
+<span class="nc" id="L30">		post(&quot;/addplay1x&quot;, (req, res) -&gt; Board.addPlay(1,'X'));</span>
+<span class="nc" id="L31">		post(&quot;/addplay1o&quot;, (req, res) -&gt; Board.addPlay(1,'O'));</span>
+		
+<span class="nc" id="L33">		post(&quot;/addplay2x&quot;, (req, res) -&gt; Board.addPlay(2,'X'));</span>
+<span class="nc" id="L34">		post(&quot;/addplay2o&quot;, (req, res) -&gt; Board.addPlay(2,'O'));</span>
+		
+<span class="nc" id="L36">		post(&quot;/addplay3x&quot;, (req, res) -&gt; Board.addPlay(3,'X'));</span>
+<span class="nc" id="L37">		post(&quot;/addplay3o&quot;, (req, res) -&gt; Board.addPlay(3,'O'));</span>
+		
+<span class="nc" id="L39">		post(&quot;/addplay4x&quot;, (req, res) -&gt; Board.addPlay(4,'X'));</span>
+<span class="nc" id="L40">		post(&quot;/addplay4o&quot;, (req, res) -&gt; Board.addPlay(4,'O'));</span>
+		
+<span class="nc" id="L42">		post(&quot;/addplay5x&quot;, (req, res) -&gt; Board.addPlay(5,'X'));</span>
+<span class="nc" id="L43">		post(&quot;/addplay5o&quot;, (req, res) -&gt; Board.addPlay(5,'O'));</span>
+		
+<span class="nc" id="L45">		post(&quot;/addplay6x&quot;, (req, res) -&gt; Board.addPlay(6,'X'));</span>
+<span class="nc" id="L46">		post(&quot;/addplay6o&quot;, (req, res) -&gt; Board.addPlay(6,'O'));</span>
+		
+<span class="nc" id="L48">		post(&quot;/addplay7x&quot;, (req, res) -&gt; Board.addPlay(7,'X'));</span>
+<span class="nc" id="L49">		post(&quot;/addplay7o&quot;, (req, res) -&gt; Board.addPlay(7,'O'));</span>
+		
+<span class="nc" id="L51">		post(&quot;/addplay8x&quot;, (req, res) -&gt; Board.addPlay(8,'X'));</span>
+<span class="nc" id="L52">		post(&quot;/addplay8o&quot;, (req, res) -&gt; Board.addPlay(8,'O'));</span>
+		
+<span class="nc" id="L54">		post(&quot;/play&quot;, (req, res) -&gt; {</span>
 			//Board.addPlay(req.queryParams(&quot;id&quot;), req.queryParams(&quot;symbol&quot;));
 		
-<span class="nc" id="L31">		res.status(200);</span>
-<span class="nc" id="L32">		return res;</span>
+<span class="nc" id="L57">		res.status(200);</span>
+<span class="nc" id="L58">		return res;</span>
 		});
 	   
-<span class="nc" id="L35">    }</span>
+<span class="nc" id="L61">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
