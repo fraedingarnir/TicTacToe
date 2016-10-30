@@ -106,9 +106,9 @@
                     url: "haswon",
                     data: null
                 }).done(function(val) {
-					if(val)
+					if(val == "true")
 					{
-						alert(val);
+						alert(player + " won! :)");
 					}
                 });
 				document.getElementById("btn1").disabled = true; 
