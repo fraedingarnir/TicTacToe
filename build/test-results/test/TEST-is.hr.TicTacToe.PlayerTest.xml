@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.hr.TicTacToe.PlayerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-10-30T11:27:44" hostname="i-1217c9a8.cs1004cloud.internal" time="0.005">
+<testsuite name="is.hr.TicTacToe.PlayerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-10-30T11:42:50" hostname="i-1217c9a8.cs1004cloud.internal" time="0.005">
   <properties/>
   <testcase name="addPlay" classname="is.hr.TicTacToe.PlayerTest" time="0.002"/>
   <testcase name="PlayerSymbol" classname="is.hr.TicTacToe.PlayerTest" time="0.0"/>
