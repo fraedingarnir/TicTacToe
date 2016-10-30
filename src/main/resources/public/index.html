@@ -15,17 +15,17 @@
             <tr>
                 <td>
 				<form id="1" method="post" action="/getvalue" class="form-inline" role="form">
-                <button type="submit" id="btn">1</button>
+                <button type="submit" id="btn1">1</button>
 				</form>
 				</td>
                 <td id ="2">
 				<form method="post" action="/getvalue" class="form-inline" role="form">
-                <button type="submit" id="btn">2</button>
+                <button type="submit" id="btn2">2</button>
 				</form>
 				</td>
                 <td id ="3">
 				<form method="post" action="/getvalue" class="form-inline" role="form">
-                <button type="submit" id="btn">3</button>
+                <button type="submit" id="btn3">3</button>
 				</form>
 				</td>
             </tr>
@@ -54,14 +54,15 @@
             var form = $('form');
 			
 			form.submit(function( event ) {
+				var id = $(this.id);
                 $.ajax({
                     type: form.attr('method'),
                     url: form.attr('action'),
                     data: null
                 }).done(function(joke) {
-                    $('#btn').html(joke).attr('class', 'alert alert-success');
+                    $(id).html(joke).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#btn').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                    $(id).html('Error, no joke found...').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
