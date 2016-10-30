@@ -105,16 +105,6 @@
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
 					
 					$.ajax({
-					type: "POST",
-					url: theurl,
-					data: null
-			});
-                }).fail(function() {
-                    $('#btn1').html('Error').attr('class', 'alert alert-danger');
-                });
-                event.preventDefault();
-				
-				$.ajax({
                     type: $('#one').attr('method'),
                     url: "haswon",
                     data: null
@@ -124,7 +114,14 @@
 					{
 						alert(player + " won! :)");
 					}
+					
                 });
+			});
+                }).fail(function() {
+                    $('#btn1').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+				
 				document.getElementById("btn1").disabled = true; 
             });
 			
