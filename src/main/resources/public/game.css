@@ -1,10 +1,25 @@
-table
+body
 {
-
+	max-width: 100%;
 }
 
-h2
+table
+{
+	margin: 10% auto;
+}
+
+h1
 {
 	text-align: center;
-	color: green;
+	font-weight: bold !important;
+}
+
+td
+{
+	padding: 5px;
+}
+
+button
+{
+	padding: 40px;
 }
