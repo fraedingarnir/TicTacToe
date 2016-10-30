@@ -18,18 +18,50 @@
 					<button type="submit" id="btn1">1</button>
 					</form>
 				</td>
-                <td>2</td>
-                <td>3</td>
+                <td>
+					<form id ="two" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn2">1</button>
+					</form>
+				</td>
+                <td>
+					<form id ="three" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn3">1</button>
+					</form>
+				</td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
+                <td>
+					<form id ="four" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn4">1</button>
+					</form>
+				</td>
+                <td>
+					<form id ="five" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn5">1</button>
+					</form>
+				</td>
+                <td>
+					<form id ="six" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn6">1</button>
+					</form>
+				</td>
             </tr>
             <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
+                <td>
+					<form id ="seven" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn7">1</button>
+					</form>
+				</td>
+                <td>
+					<form id ="eight" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn8">1</button>
+					</form>
+				</td>
+                <td>
+					<form id ="nine" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit" id="btn9">1</button>
+					</form>
+				</td>
             </tr>
         </table>
         <!-- Load jquery -->
@@ -48,6 +80,110 @@
                     $('#btn1').html(val).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn1').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#two').submit(function( event ) {
+                $.ajax({
+                    type: $('#two').attr('method'),
+                    url: $('#two').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn2').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn2').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#three').submit(function( event ) {
+                $.ajax({
+                    type: $('#three').attr('method'),
+                    url: $('#three').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn3').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn3').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#four').submit(function( event ) {
+                $.ajax({
+                    type: $('#four').attr('method'),
+                    url: $('#four').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn4').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn4').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#five').submit(function( event ) {
+                $.ajax({
+                    type: $('#five').attr('method'),
+                    url: $('#five').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn5').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn5').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#six').submit(function( event ) {
+                $.ajax({
+                    type: $('#six').attr('method'),
+                    url: $('#six').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn6').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn6').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#seven').submit(function( event ) {
+                $.ajax({
+                    type: $('#seven').attr('method'),
+                    url: $('#seven').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn7').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn7').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#eight').submit(function( event ) {
+                $.ajax({
+                    type: $('#eight').attr('method'),
+                    url: $('#eight').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn8').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn8').html('Error').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+			
+			$('#nine').submit(function( event ) {
+                $.ajax({
+                    type: $('#nine').attr('method'),
+                    url: $('#nine').attr('action'),
+                    data: null
+                }).done(function(val) {
+                    $('#btn9').html(val).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn9').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
