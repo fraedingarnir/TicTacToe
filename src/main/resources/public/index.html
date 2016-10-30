@@ -29,7 +29,7 @@
             </tr>
         </table>
 			<form method="post" action="/getvalue" class="form-inline" role="form">
-                <button type="submit">getvalue</button>
+                <button type="submit" id ="btn">getvalue</button>
             </form>
 			<div id="results" class="alert alert-info">How many Chuck Norris require to screw a light
                 bulb? None, he will screw it all.</div>
@@ -47,9 +47,9 @@
                     url: form.attr('action'),
                     data: null
                 }).done(function(joke) {
-                    $('#results').html(joke).attr('class', 'alert alert-success');
+                    $('#btn').html(joke).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#results').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                    $('#btn').html('Error, no joke found...').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
