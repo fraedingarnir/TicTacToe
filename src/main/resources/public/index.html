@@ -100,6 +100,17 @@
                 });
                 event.preventDefault();
 				
+				$.ajax({
+                    type: $('#one').attr('method'),
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val)
+					{
+						alert(player + " won!");
+					}
+                });
+                });
 				document.getElementById("btn1").disabled = true; 
             });
 			

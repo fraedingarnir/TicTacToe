@@ -22,7 +22,7 @@ import spark.servlet.SparkApplication;
     public void init() {
 <span class="nc" id="L23">        final Board board = new Board();</span>
 		
-<span class="nc" id="L25">		post(&quot;/getvalue&quot;, (req, res) -&gt; board.getSquareElement(1));</span>
+<span class="nc" id="L25">		post(&quot;/haswon&quot;, (req, res) -&gt; board.hasWon());</span>
 		
 <span class="nc" id="L27">		post(&quot;/addplay0x&quot;, (req, res) -&gt; Board.addPlay(0,'X'));</span>
 <span class="nc" id="L28">		post(&quot;/addplay0o&quot;, (req, res) -&gt; Board.addPlay(0,'O'));</span>
