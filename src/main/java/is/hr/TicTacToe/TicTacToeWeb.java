@@ -23,8 +23,10 @@ public class TicTacToeWeb implements SparkApplication{
 	@Override
     public void init() {
 		System.out.println("virkar2");
-       // final Board board = new Board();
+        final Board board = new Board();
 		System.out.println("virkar3");
+		board.addPlay(1,"X");
+		System.out.println(board[1])
        // post("/play", (req, res) -> Board.addPlay(req.queryParams("id"), req.queryParams("symbol")));
 		
     }
