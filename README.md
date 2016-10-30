@@ -7,6 +7,7 @@ Travis: [![Build Status](https://travis-ci.org/fraedingarnir/TicTacToe.svg?branc
 
 CodeCoverage: [![codecov](https://codecov.io/gh/fraedingarnir/TicTacToe/branch/master/graph/badge.svg)](https://codecov.io/gh/fraedingarnir/TicTacToe)
 
+##Authors
 * Alex Kári Ívarsson
 * Arnar Jóhannsson
 * Egill Örn Benediktsson
