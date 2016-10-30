@@ -14,57 +14,62 @@ import java.util.Scanner;
 <span class="nc" id="L14">		Scanner in = new Scanner(System.in);</span>
 
 		//printBoard(board);
-
-<span class="nc" id="L18">		char player = 'X';</span>
-<span class="nc" id="L19">		int turn = 0;</span>
-<span class="nc bnc" id="L20" title="All 4 branches missed.">		for(; !board.hasWon() &amp;&amp; turn &lt; 9; turn++)</span>
+<span class="nc" id="L17">		String cont = &quot;play&quot;;</span>
+<span class="nc bnc" id="L18" title="All 4 branches missed.">		while(cont == &quot;play&quot; || cont == &quot;Play&quot;)</span>
 		{
-<span class="nc bnc" id="L22" title="All 2 branches missed.">			if(turn%2 == 0)</span>
-<span class="nc" id="L23">				player = 'X';</span>
-			else
-<span class="nc" id="L25">				player = 'O';</span>
-
-<span class="nc" id="L27">			System.out.println(printBoard(board));</span>
-<span class="nc" id="L28">			System.out.println(&quot;Player &quot; + player + &quot; your turn, pick a value between 1-9&quot;);</span>
-			
-			while(true)
+<span class="nc" id="L20">			board.init();</span>
+<span class="nc" id="L21">			char player = 'X';</span>
+<span class="nc" id="L22">			int turn = 0;</span>
+<span class="nc bnc" id="L23" title="All 4 branches missed.">			for(; !board.hasWon() &amp;&amp; turn &lt; 9; turn++)</span>
 			{
-<span class="nc" id="L32">				int play = in.nextInt();</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">				if(board.addPlay(play, player))</span>
-<span class="nc" id="L34">					break;</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">				if(turn%2 == 0)</span>
+<span class="nc" id="L26">					player = 'X';</span>
 				else
-<span class="nc" id="L36">					System.out.println(&quot;That move is not allowed&quot;);</span>
-<span class="nc" id="L37">			}</span>
-		}
+<span class="nc" id="L28">					player = 'O';</span>
 
-<span class="nc" id="L40">		System.out.println(printBoard(board));</span>
+<span class="nc" id="L30">				System.out.println(printBoard(board));</span>
+<span class="nc" id="L31">				System.out.println(&quot;Player &quot; + player + &quot; your turn, pick a value between 1-9&quot;);</span>
+				
+				while(true)
+				{
+<span class="nc" id="L35">					int play = in.nextInt();</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">					if(board.addPlay(play, player))</span>
+<span class="nc" id="L37">						break;</span>
+					else
+<span class="nc" id="L39">						System.out.println(&quot;That move is not allowed&quot;);</span>
+<span class="nc" id="L40">				}</span>
+			}
 
-<span class="nc bnc" id="L42" title="All 4 branches missed.">		if(turn == 9 &amp;&amp; !board.hasWon())</span>
-<span class="nc" id="L43">			System.out.println(&quot;It's a Draw!&quot;);</span>
-		else
-<span class="nc" id="L45">			System.out.println(&quot;Congratulations &quot; + player + &quot;! you are the winner!!!&quot;);</span>
+<span class="nc" id="L43">			System.out.println(printBoard(board));</span>
+
+<span class="nc bnc" id="L45" title="All 4 branches missed.">			if(turn == 9 &amp;&amp; !board.hasWon())</span>
+<span class="nc" id="L46">				System.out.println(&quot;It's a Draw!&quot;);</span>
+			else
+<span class="nc" id="L48">				System.out.println(&quot;Congratulations &quot; + player + &quot;! you are the winner!!!&quot;);</span>
 			
-		
-<span class="nc" id="L48">	}</span>
+<span class="nc" id="L50">			System.out.println(&quot;To play again type \&quot;play\&quot; &quot;);</span>
+<span class="nc" id="L51">			cont = in.nextLine();</span>
+<span class="nc" id="L52">		}</span>
+<span class="nc" id="L53">	}</span>
 
 	private static String printBoard(Board board)
 	{
-<span class="nc" id="L52">		String result = &quot;&quot;;</span>
-<span class="nc" id="L53">		int line = 0;</span>
-<span class="nc bnc" id="L54" title="All 2 branches missed.">        for(int row = 0; row &lt; 3; row++)</span>
+<span class="nc" id="L57">		String result = &quot;&quot;;</span>
+<span class="nc" id="L58">		int line = 0;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        for(int row = 0; row &lt; 3; row++)</span>
         {
-<span class="nc bnc" id="L56" title="All 2 branches missed.">                for(int col = line; col &lt; line+3; col++)</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">                for(int col = line; col &lt; line+3; col++)</span>
                 {
-<span class="nc" id="L58">                        result += (&quot; &quot; + board.getSquareElement(col));</span>
-<span class="nc bnc" id="L59" title="All 8 branches missed.">                        if(col != 2 &amp;&amp; col != 5 &amp;&amp; col != 8 || col == 0)</span>
-<span class="nc" id="L60">                                result += (&quot; |&quot;);</span>
+<span class="nc" id="L63">                        result += (&quot; &quot; + board.getSquareElement(col));</span>
+<span class="nc bnc" id="L64" title="All 8 branches missed.">                        if(col != 2 &amp;&amp; col != 5 &amp;&amp; col != 8 || col == 0)</span>
+<span class="nc" id="L65">                                result += (&quot; |&quot;);</span>
                 }
 
-<span class="nc bnc" id="L63" title="All 2 branches missed.">                if(row != 2)</span>
-<span class="nc" id="L64">                        result += (&quot;\n---|---|---\n&quot;);</span>
-<span class="nc" id="L65">                line += 3;</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">                if(row != 2)</span>
+<span class="nc" id="L69">                        result += (&quot;\n---|---|---\n&quot;);</span>
+<span class="nc" id="L70">                line += 3;</span>
         }
-<span class="nc" id="L67">        return result;</span>
+<span class="nc" id="L72">        return result;</span>
 	}
 
 

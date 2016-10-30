@@ -14,37 +14,42 @@ public class PlayGame {
 		Scanner in = new Scanner(System.in);
 
 		//printBoard(board);
-
-		char player = 'X';
-		int turn = 0;
-		for(; !board.hasWon() && turn < 9; turn++)
+		String cont = "play";
+		while(cont == "play" || cont == "Play")
 		{
-			if(turn%2 == 0)
-				player = 'X';
-			else
-				player = 'O';
+			board.init();
+			char player = 'X';
+			int turn = 0;
+			for(; !board.hasWon() && turn < 9; turn++)
+			{
+				if(turn%2 == 0)
+					player = 'X';
+				else
+					player = 'O';
+
+				System.out.println(printBoard(board));
+				System.out.println("Player " + player + " your turn, pick a value between 1-9");
+				
+				while(true)
+				{
+					int play = in.nextInt();
+					if(board.addPlay(play, player))
+						break;
+					else
+						System.out.println("That move is not allowed");
+				}
+			}
 
 			System.out.println(printBoard(board));
-			System.out.println("Player " + player + " your turn, pick a value between 1-9");
+
+			if(turn == 9 && !board.hasWon())
+				System.out.println("It's a Draw!");
+			else
+				System.out.println("Congratulations " + player + "! you are the winner!!!");
 			
-			while(true)
-			{
-				int play = in.nextInt();
-				if(board.addPlay(play, player))
-					break;
-				else
-					System.out.println("That move is not allowed");
-			}
+			System.out.println("To play again type \"play\" ");
+			cont = in.nextLine();
 		}
-
-		System.out.println(printBoard(board));
-
-		if(turn == 9 && !board.hasWon())
-			System.out.println("It's a Draw!");
-		else
-			System.out.println("Congratulations " + player + "! you are the winner!!!");
-			
-		
 	}
 
 	private static String printBoard(Board board)
