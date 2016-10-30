@@ -20,46 +20,46 @@
 				</td>
                 <td>
 					<form id ="two" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn2">1</button>
+					<button type="submit" id="btn2">2</button>
 					</form>
 				</td>
                 <td>
 					<form id ="three" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn3">1</button>
+					<button type="submit" id="btn3">3</button>
 					</form>
 				</td>
             </tr>
             <tr>
                 <td>
 					<form id ="four" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn4">1</button>
+					<button type="submit" id="btn4">4</button>
 					</form>
 				</td>
                 <td>
 					<form id ="five" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn5">1</button>
+					<button type="submit" id="btn5">5</button>
 					</form>
 				</td>
                 <td>
 					<form id ="six" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn6">1</button>
+					<button type="submit" id="btn6">6</button>
 					</form>
 				</td>
             </tr>
             <tr>
                 <td>
 					<form id ="seven" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn7">1</button>
+					<button type="submit" id="btn7">7</button>
 					</form>
 				</td>
                 <td>
 					<form id ="eight" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn8">1</button>
+					<button type="submit" id="btn8">8</button>
 					</form>
 				</td>
                 <td>
 					<form id ="nine" method="post" action="/getvalue" class="form-inline" role="form">
-					<button type="submit" id="btn9">1</button>
+					<button type="submit" id="btn9">9</button>
 					</form>
 				</td>
             </tr>
@@ -71,17 +71,29 @@
         <script>
         $(document).ready(function() {
 			
+			var player = 'X';
+			
 			$('#one').submit(function( event ) {
+			
                 $.ajax({
                     type: $('#one').attr('method'),
                     url: $('#one').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn1').html(val).attr('class', 'alert alert-success');
+                    $('#btn1').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn1').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#two').submit(function( event ) {
@@ -90,11 +102,20 @@
                     url: $('#two').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn2').html(val).attr('class', 'alert alert-success');
+                    $('#btn2').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn2').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#three').submit(function( event ) {
@@ -103,11 +124,20 @@
                     url: $('#three').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn3').html(val).attr('class', 'alert alert-success');
+                    $('#btn3').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn3').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#four').submit(function( event ) {
@@ -116,11 +146,20 @@
                     url: $('#four').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn4').html(val).attr('class', 'alert alert-success');
+                    $('#btn4').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn4').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#five').submit(function( event ) {
@@ -129,11 +168,20 @@
                     url: $('#five').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn5').html(val).attr('class', 'alert alert-success');
+                    $('#btn5').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn5').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#six').submit(function( event ) {
@@ -142,11 +190,20 @@
                     url: $('#six').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn6').html(val).attr('class', 'alert alert-success');
+                    $('#btn6').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn6').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#seven').submit(function( event ) {
@@ -155,11 +212,20 @@
                     url: $('#seven').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn7').html(val).attr('class', 'alert alert-success');
+                    $('#btn7').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn7').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#eight').submit(function( event ) {
@@ -168,11 +234,20 @@
                     url: $('#eight').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn8').html(val).attr('class', 'alert alert-success');
+                    $('#btn8').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn8').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
 			
 			$('#nine').submit(function( event ) {
@@ -181,11 +256,20 @@
                     url: $('#nine').attr('action'),
                     data: null
                 }).done(function(val) {
-                    $('#btn9').html(val).attr('class', 'alert alert-success');
+                    $('#btn9').html(player).attr('class', 'alert alert-success');
                 }).fail(function() {
                     $('#btn9').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
+				
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
             });
         });
         </script>
