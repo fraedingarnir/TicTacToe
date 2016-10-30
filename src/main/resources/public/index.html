@@ -13,94 +13,45 @@
 		
         <table>
             <tr>
-                <td id ="4">
-				<button id="0" onClick="btn1(this.id)" action="/getvalue">1</button>
-				</td>
-				<td id ="4">
-				<button id="1" onClick="btn2(this.id)">2</button>
-				</td>
-				<td id ="4">
-				<button id="2" onClick="btn3(this.id)">3</button>
-				</td>
+                <td id ="1">1</td>
+                <td id ="2">2</td>
+                <td id ="3">3</td>
             </tr>
             <tr>
-                <td id ="4">
-				<button id="3" onClick="btn4(this.id)">4</button>
-				</td>
-				<td id ="4">
-				<button id="4" onClick="btn5(this.id)">5</button>
-				</td>
-				<td id ="4">
-				<button id="5" onClick="btn6(this.id)">6</button>
-				</td>
+                <td id ="4">4</td>
+                <td id ="5">5</td>
+                <td id ="6">6</td>
             </tr>
             <tr>
-                <td id ="4">
-				<button id="6" onClick="btn7(this.id)">7</button>
-				</td>
-				<td id ="4">
-				<button id="7" onClick="btn8(this.id)">8</button>
-				</td>
-				<td id ="4">
-				<button id="8" onClick="btn9(this.id)">9</button>
-				</td>
+                <td id="7">7</td>
+                <td id="8">8</td>
+                <td id="9">9</td>
             </tr>
         </table>
-			<form method="post" action="/getvalue" class="form-inline" role="form">
+			<form method="post" action="/play" class="form-inline" role="form">
                 <button type="submit">getvalue</button>
             </form>
-			<div id="results" class="alert alert-info">How many Chuck Norris require to screw a light
-                bulb? None, he will screw it all.</div>
         <!-- Load jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <!-- Ajax down below -->
         <script>
-		
-		function btn1(clicked_id)
-		{	
+        $(document).ready(function() {
+            var form = $('form');
 			
-		}
-		
-		function btn2(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn3(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn4(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn5(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn6(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn7(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn8(clicked_id)
-		{
-			alert(clicked_id);
-		}
-		
-		function btn9(clicked_id)
-		{
-			alert(clicked_id);
-		}
+			form.submit(function( event ) {
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: null
+                }).done(function(joke) {
+                    $('#btn').html(joke).attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#btn').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+        });
         </script>
     </body>
 </html>
