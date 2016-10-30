@@ -14,8 +14,8 @@ import java.util.Scanner;
 <span class="nc" id="L14">		Scanner in = new Scanner(System.in);</span>
 
 		//printBoard(board);
-<span class="nc" id="L17">		String cont = &quot;play&quot;;</span>
-<span class="nc bnc" id="L18" title="All 4 branches missed.">		while(cont == &quot;play&quot; || cont == &quot;Play&quot;)</span>
+<span class="nc" id="L17">		int cont = 1;</span>
+<span class="nc bnc" id="L18" title="All 2 branches missed.">		while(cont == 1)</span>
 		{
 <span class="nc" id="L20">			board.init();</span>
 <span class="nc" id="L21">			char player = 'X';</span>
@@ -47,8 +47,8 @@ import java.util.Scanner;
 			else
 <span class="nc" id="L48">				System.out.println(&quot;Congratulations &quot; + player + &quot;! you are the winner!!!&quot;);</span>
 			
-<span class="nc" id="L50">			System.out.println(&quot;To play again type \&quot;play\&quot; &quot;);</span>
-<span class="nc" id="L51">			cont = in.nextLine();</span>
+<span class="nc" id="L50">			System.out.println(&quot;To play again type \&quot;1\&quot; &quot;);</span>
+<span class="nc" id="L51">			cont = in.nextInt();		</span>
 <span class="nc" id="L52">		}</span>
 <span class="nc" id="L53">	}</span>
 

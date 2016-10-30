@@ -14,8 +14,8 @@ public class PlayGame {
 		Scanner in = new Scanner(System.in);
 
 		//printBoard(board);
-		String cont = "play";
-		while(cont == "play" || cont == "Play")
+		int cont = 1;
+		while(cont == 1)
 		{
 			board.init();
 			char player = 'X';
@@ -47,8 +47,8 @@ public class PlayGame {
 			else
 				System.out.println("Congratulations " + player + "! you are the winner!!!");
 			
-			System.out.println("To play again type \"play\" ");
-			cont = in.nextLine();
+			System.out.println("To play again type \"1\" ");
+			cont = in.nextInt();		
 		}
 	}
 
