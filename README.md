@@ -15,7 +15,7 @@ CodeCoverage: [![codecov](https://codecov.io/gh/fraedingarnir/TicTacToe/branch/m
 * Jón Heiðar Sigmundsson
 
 ##About
-This project was implemented for late-term assignment in Hugbúnaðarfræði. It's a web and console based application of the classic game, TicTacToe. The game can be played on the [web](https://tictactoefraedingarnir.herokuapp.com/) or by installing it on your local machine. Enjoy!
+This project was implemented for late-term assignment in Hugbúnaðarfræði. It's a web and console based application of the classic game, TicTacToe. The game can be played on the [web](https://tictactoefraedingarnir.herokuapp.com/) or by installing it on your local machine. To play the game on your local machine click on download game, extract the file and run bin/TicTacToe.bat Enjoy!
 
 ##Manuals
 * [Design Report](docs/designreport.md)
