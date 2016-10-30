@@ -80,6 +80,7 @@
 			
 			var player = 'O';
 			
+			
 			$('#one').submit(function( event ) {
 			
 				if(player == 'X')
@@ -104,18 +105,6 @@
                 }).done(function(val) {
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
 					
-					$.ajax({
-                    type: $('#one').attr('method'),
-                    url: "haswon",
-                    data: null
-                }).done(function(val) {
-					alert(val);
-					if(val == "true")
-					{
-						alert(player + " won! :)");
-					}
-					
-                });
 			});
                 }).fail(function() {
                     $('#btn1').html('Error').attr('class', 'alert alert-danger');
@@ -332,6 +321,7 @@
 				{
 					theurl = "/addplay7x";
 				}
+				
                 $.ajax({
                     type: $('#eight').attr('method'),
                     url: theurl,
