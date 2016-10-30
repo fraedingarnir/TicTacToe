@@ -13,7 +13,11 @@
 		
         <table>
             <tr>
-                <td id ="1">1</td>
+                <td id ="1">
+					<form id ="btn1" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit">getvalue</button>
+					</form>
+				</td>
                 <td id ="2">2</td>
                 <td id ="3">3</td>
             </tr>
@@ -28,29 +32,37 @@
                 <td id="9">9</td>
             </tr>
         </table>
-			<form method="post" action="/play" class="form-inline" role="form">
-                <button type="submit">getvalue</button>
+			<form id ="one" method="post" action="/getvalue" class="form-inline" role="form">
+                <button type="submit" id="btn1">getvalue</button>
             </form>
+			<div id="results" class="alert alert-info">How many Chuck Norris require to screw a light
+                bulb? None, he will screw it all.</div>
         <!-- Load jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <!-- Ajax down below -->
         <script>
         $(document).ready(function() {
-            var form = $('form');
 			
-			form.submit(function( event ) {
+			$('#one').submit(function( event ) {
                 $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action'),
+                    type: $('#one').attr('method'),
+                    url: $('#one').attr('action'),
                     data: null
                 }).done(function(joke) {
-                    $('#btn').html(joke).attr('class', 'alert alert-success');
+                    $('#btn1').html(joke).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#btn').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                    $('#btn1').html('Error, no joke found...').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
+			
+			$("tr").click(function() {
+				var box = $("#id");
+				var player = $("X");
+				alert("test");
+		});
+			
         });
         </script>
     </body>
