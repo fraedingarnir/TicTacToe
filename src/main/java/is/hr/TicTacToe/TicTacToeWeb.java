@@ -32,6 +32,6 @@ public class TicTacToeWeb implements SparkApplication{
 		board.addPlay(1,'X');
 		System.out.println(board.getSquareElement(1));
        // post("/play", (req, res) -> Board.addPlay(req.queryParams("id"), req.queryParams("symbol")));
-		
+	   
     }
 }
