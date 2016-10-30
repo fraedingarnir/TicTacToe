@@ -59,14 +59,10 @@
 		
 		function btn1(clicked_id)
 		{	
-			$.ajax({
-            type     : "POST",
-            url      : $(this).attr('action'),
-            data     : $(this).serializeArray(),
-            success  : function(data) {
-				alert(data);
-            }
-    });
+		
+			var test = $(this).attr('action');
+			alert(test);
+			
 		}
 		
 		function btn2(clicked_id)
