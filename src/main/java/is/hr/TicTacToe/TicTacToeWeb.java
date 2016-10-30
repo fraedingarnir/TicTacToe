@@ -8,9 +8,13 @@ import spark.servlet.SparkApplication;
 public class TicTacToeWeb implements SparkApplication{
 	
 	    public static void main(String[] args) {
+			
+		System.out.println("v1");
+		
         staticFileLocation("/public");
+		System.out.println("v2");
         SparkApplication TicWeb = new TicTacToeWeb();
-
+		System.out.println("v3");
         String port = System.getenv("PORT");
         if (port != null) {
             port(Integer.valueOf(port));
