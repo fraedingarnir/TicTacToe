@@ -16,51 +16,51 @@
             <tr>
                 <td>
 					<form id ="one" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn1">1</button>
+					<button type="submit" id="btn1"></button>
 					</form>
 				</td>
                 <td>
 					<form id ="two" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn2">2</button>
+					<button type="submit" id="btn2"></button>
 					</form>
 				</td>
                 <td>
 					<form id ="three" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn3">3</button>
+					<button type="submit" id="btn3"></button>
 					</form>
 				</td>
             </tr>
             <tr>
                 <td>
 					<form id ="four" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn4">4</button>
+					<button type="submit" id="btn4"></button>
 					</form>
 				</td>
                 <td>
 					<form id ="five" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn5">5</button>
+					<button type="submit" id="btn5"></button>
 					</form>
 				</td>
                 <td>
 					<form id ="six" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn6">6</button>
+					<button type="submit" id="btn6"></button>
 					</form>
 				</td>
             </tr>
             <tr>
                 <td>
 					<form id ="seven" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn7">7</button>
+					<button type="submit" id="btn7"></button>
 					</form>
 				</td>
                 <td>
 					<form id ="eight" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn8">8</button>
+					<button type="submit" id="btn8"></button>
 					</form>
 				</td>
                 <td>
 					<form id ="nine" method="post" class="form-inline" role="form">
-					<button type="submit" id="btn9">9</button>
+					<button type="submit" id="btn9"></button>
 					</form>
 				</td>
             </tr>
@@ -102,25 +102,21 @@
                     data: null
                 }).done(function(val) {
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
-					
-					$.ajax({
-                    type: $('#one').attr('method'),
-                    url: "haswon",
-                    data: null
-                }).done(function(val) {
-					alert(val);
-					if(val == "true")
-					{
-						alert(player + " won! :)");
-					}
-                });
-					
-					
                 }).fail(function() {
                     $('#btn1').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
 				
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn1").disabled = true; 
             });
 			
@@ -151,12 +147,11 @@
                 });
                 event.preventDefault();
 				
-				$.ajax({
-                    type: $('#two').attr('method'),
+					$.ajax({
+                    type: "POST",
                     url: "haswon",
                     data: null
                 }).done(function(val) {
-					alert(val);
 					if(val == "true")
 					{
 						alert(player + " won! :)");
@@ -191,7 +186,16 @@
                     $('#btn3').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+					$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn3").disabled = true; 
             });
 			
@@ -221,7 +225,16 @@
                     $('#btn4').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn4").disabled = true; 
             });
 			
@@ -251,7 +264,16 @@
                     $('#btn5').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-			
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn5").disabled = true; 
             });
 			
@@ -281,7 +303,16 @@
                     $('#btn6').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn6").disabled = true; 
             });
 			
@@ -311,7 +342,16 @@
                     $('#btn7').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn7").disabled = true; 
             });
 			
@@ -341,7 +381,16 @@
                     $('#btn8').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn8").disabled = true; 
             });
 			
@@ -371,7 +420,16 @@
                     $('#btn9').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				$.ajax({
+                    type: "POST",
+                    url: "haswon",
+                    data: null
+                }).done(function(val) {
+					if(val == "true")
+					{
+						alert(player + " won! :)");
+					}
+                });
 				document.getElementById("btn9").disabled = true; 
             });
         });
