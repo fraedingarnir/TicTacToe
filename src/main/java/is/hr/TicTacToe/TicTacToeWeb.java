@@ -28,7 +28,7 @@ public class TicTacToeWeb implements SparkApplication{
 		
 		post("/addplay0x", (req, res) ->{ 
 		
-			Board.addPlay(0,'X');
+			Board.addPlay(1,'X');
 		
 			for(int i = 0; i < 9; i++)
 			{
@@ -39,31 +39,31 @@ public class TicTacToeWeb implements SparkApplication{
 		
 		
 		});
-		post("/addplay0o", (req, res) -> Board.addPlay(0,'O'));
+		post("/addplay0o", (req, res) -> Board.addPlay(1,'O'));
 		
-		post("/addplay1x", (req, res) -> Board.addPlay(1,'X'));
-		post("/addplay1o", (req, res) -> Board.addPlay(1,'O'));
+		post("/addplay1x", (req, res) -> Board.addPlay(2,'X'));
+		post("/addplay1o", (req, res) -> Board.addPlay(2,'O'));
 		
-		post("/addplay2x", (req, res) -> Board.addPlay(2,'X'));
-		post("/addplay2o", (req, res) -> Board.addPlay(2,'O'));
+		post("/addplay2x", (req, res) -> Board.addPlay(3,'X'));
+		post("/addplay2o", (req, res) -> Board.addPlay(3,'O'));
 		
-		post("/addplay3x", (req, res) -> Board.addPlay(3,'X'));
-		post("/addplay3o", (req, res) -> Board.addPlay(3,'O'));
+		post("/addplay3x", (req, res) -> Board.addPlay(4,'X'));
+		post("/addplay3o", (req, res) -> Board.addPlay(4,'O'));
 		
-		post("/addplay4x", (req, res) -> Board.addPlay(4,'X'));
-		post("/addplay4o", (req, res) -> Board.addPlay(4,'O'));
+		post("/addplay4x", (req, res) -> Board.addPlay(5,'X'));
+		post("/addplay4o", (req, res) -> Board.addPlay(5,'O'));
 		
-		post("/addplay5x", (req, res) -> Board.addPlay(5,'X'));
-		post("/addplay5o", (req, res) -> Board.addPlay(5,'O'));
+		post("/addplay5x", (req, res) -> Board.addPlay(6,'X'));
+		post("/addplay5o", (req, res) -> Board.addPlay(6,'O'));
 		
-		post("/addplay6x", (req, res) -> Board.addPlay(6,'X'));
-		post("/addplay6o", (req, res) -> Board.addPlay(6,'O'));
+		post("/addplay6x", (req, res) -> Board.addPlay(7,'X'));
+		post("/addplay6o", (req, res) -> Board.addPlay(7,'O'));
 		
-		post("/addplay7x", (req, res) -> Board.addPlay(7,'X'));
-		post("/addplay7o", (req, res) -> Board.addPlay(7,'O'));
+		post("/addplay7x", (req, res) -> Board.addPlay(8,'X'));
+		post("/addplay7o", (req, res) -> Board.addPlay(8,'O'));
 		
-		post("/addplay8x", (req, res) -> Board.addPlay(8,'X'));
-		post("/addplay8o", (req, res) -> Board.addPlay(8,'O'));
+		post("/addplay8x", (req, res) -> Board.addPlay(9,'X'));
+		post("/addplay8o", (req, res) -> Board.addPlay(9,'O'));
 		
 		post("/play", (req, res) -> {
 			//Board.addPlay(req.queryParams("id"), req.queryParams("symbol"));
