@@ -15,17 +15,20 @@ import spark.servlet.SparkApplication;
 <span class="nc bnc" id="L15" title="All 2 branches missed.">        if (port != null) {</span>
 <span class="nc" id="L16">            port(Integer.valueOf(port));</span>
         }
-<span class="nc" id="L18">		System.out.println(&quot;virkar&quot;);</span>
-<span class="nc" id="L19">        TicWeb.init();</span>
-<span class="nc" id="L20">    }</span>
+<span class="nc" id="L18">		System.out.println(&quot;port: &quot;+ port);</span>
+<span class="nc" id="L19">		System.out.println(&quot;virkar&quot;);</span>
+<span class="nc" id="L20">        TicWeb.init();</span>
+<span class="nc" id="L21">    }</span>
 	
 	@Override
     public void init() {
-<span class="nc" id="L24">		System.out.println(&quot;virkar2&quot;);</span>
-       // final Board board = new Board();
-<span class="nc" id="L26">		System.out.println(&quot;virkar3&quot;);</span>
+<span class="nc" id="L25">		System.out.println(&quot;virkar2&quot;);</span>
+<span class="nc" id="L26">        final Board board = new Board();</span>
+<span class="nc" id="L27">		System.out.println(&quot;virkar3&quot;);</span>
+<span class="nc" id="L28">		board.addPlay(1,'X');</span>
+<span class="nc" id="L29">		System.out.println(board.getSquareElement(1));</span>
        // post(&quot;/play&quot;, (req, res) -&gt; Board.addPlay(req.queryParams(&quot;id&quot;), req.queryParams(&quot;symbol&quot;)));
 		
-<span class="nc" id="L29">    }</span>
+<span class="nc" id="L32">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
