@@ -8,23 +8,24 @@ import spark.servlet.SparkApplication;
 <span class="nc" id="L8">public class TicTacToeWeb implements SparkApplication{</span>
 	
 	    public static void main(String[] args) {
-<span class="nc" id="L11">        staticFileLocation(&quot;/lib&quot;);</span>
+<span class="nc" id="L11">        staticFileLocation(&quot;/public&quot;);</span>
 <span class="nc" id="L12">        SparkApplication TicWeb = new TicTacToeWeb();</span>
 
 <span class="nc" id="L14">        String port = System.getenv(&quot;PORT&quot;);</span>
 <span class="nc bnc" id="L15" title="All 2 branches missed.">        if (port != null) {</span>
 <span class="nc" id="L16">            port(Integer.valueOf(port));</span>
         }
-
+<span class="nc" id="L18">		System.out.println(&quot;virkar&quot;);</span>
 <span class="nc" id="L19">        TicWeb.init();</span>
 <span class="nc" id="L20">    }</span>
 	
 	@Override
     public void init() {
-<span class="nc" id="L24">        final Board board = new Board();</span>
-		
+<span class="nc" id="L24">		System.out.println(&quot;virkar2&quot;);</span>
+<span class="nc" id="L25">        final Board board = new Board();</span>
+<span class="nc" id="L26">		System.out.println(&quot;virkar3&quot;);</span>
        // post(&quot;/play&quot;, (req, res) -&gt; Board.addPlay(req.queryParams(&quot;id&quot;), req.queryParams(&quot;symbol&quot;)));
 		
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L29">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

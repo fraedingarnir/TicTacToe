@@ -15,16 +15,15 @@ public class TicTacToeWeb implements SparkApplication{
         if (port != null) {
             port(Integer.valueOf(port));
         }
-		
-		console.log("virkar");
+		System.out.println("virkar");
         TicWeb.init();
     }
 	
 	@Override
     public void init() {
-		console.log("virkar2")
+		System.out.println("virkar2");
         final Board board = new Board();
-		console.log("virkar3")
+		System.out.println("virkar3");
        // post("/play", (req, res) -> Board.addPlay(req.queryParams("id"), req.queryParams("symbol")));
 		
     }
