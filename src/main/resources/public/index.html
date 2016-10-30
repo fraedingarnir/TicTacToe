@@ -30,7 +30,9 @@
 				</td>
             </tr>
             <tr>
-                <td id ="4">4</td>
+                <td id ="4">
+				<button id="3" onClick="btn1(this.id)">4</button>
+				</td>
                 <td id ="5">5</td>
                 <td id ="6">6</td>
             </tr>
@@ -51,6 +53,10 @@
         <!-- Ajax down below -->
         <script>
         $(document).ready(function() {
+			function btn1(clicked_id)
+			{
+				alert(clicked_id);
+			}
 			
 			submit(function( event ) {
 				var form = $(this).closest("form");
