@@ -28,9 +28,11 @@
                 <td id="9">9</td>
             </tr>
         </table>
-			<form method="post" action="/play" class="form-inline" role="form">
+			<form method="post" action="/getvalue" class="form-inline" role="form">
                 <button type="submit">getvalue</button>
             </form>
+			<div id="results" class="alert alert-info">How many Chuck Norris require to screw a light
+                bulb? None, he will screw it all.</div>
         <!-- Load jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -45,12 +47,19 @@
                     url: form.attr('action'),
                     data: null
                 }).done(function(joke) {
-                    $('#btn').html(joke).attr('class', 'alert alert-success');
+                    $('#results').html(joke).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#btn').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                    $('#results').html('Error, no joke found...').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
+			
+			$("tr").click(function() {
+				var box = $("#id");
+				var player = $("X");
+				alert("test");
+		}	);
+			
         });
         </script>
     </body>
