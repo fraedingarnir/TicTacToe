@@ -80,6 +80,18 @@
 			
 			var player = 'O';
 			
+			function disable()
+			{
+				document.getElementById("btn1").disabled = true; 
+				document.getElementById("btn2").disabled = true; 
+				document.getElementById("btn3").disabled = true; 
+				document.getElementById("btn4").disabled = true; 
+				document.getElementById("btn5").disabled = true; 
+				document.getElementById("btn6").disabled = true; 
+				document.getElementById("btn7").disabled = true; 
+				document.getElementById("btn8").disabled = true;
+				document.getElementById("btn9").disabled = true; 
+			}
 			$('#one').submit(function( event ) {
 			
 				if(player == 'X')
@@ -101,7 +113,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn1').html(player).attr('class', 'btn-default disabled');
+                    $('#btn1').html(player);
                 }).fail(function() {
                     $('#btn1').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -115,6 +127,7 @@
 					if(val == "true")
 					{
 						alert(player + " won! :)");
+						disable();
 					}
                 });
 				document.getElementById("btn1").disabled = true; 
@@ -141,7 +154,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn2').html(player).attr('class', 'btn-default disabled');
+                    $('#btn2').html(player);
                 }).fail(function() {
                     $('#btn2').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -155,6 +168,7 @@
 					if(val == "true")
 					{
 						alert(player + " won! :)");
+						disable();
 					}
                 });
 				document.getElementById("btn2").disabled = true; 
@@ -181,7 +195,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn3').html(player).attr('class', 'btn-default disabled');
+                    $('#btn3').html(player);
                 }).fail(function() {
                     $('#btn3').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -193,6 +207,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
@@ -220,7 +235,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn4').html(player).attr('class', 'btn-default disabled');
+                    $('#btn4').html(player);
                 }).fail(function() {
                     $('#btn4').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -232,6 +247,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
@@ -259,7 +275,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn5').html(player).attr('class', 'btn-default disabled');
+                    $('#btn5').html(player);
                 }).fail(function() {
                     $('#btn5').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -271,6 +287,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
@@ -298,7 +315,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn6').html(player).attr('class', 'btn-default disabled');
+                    $('#btn6').html(player);
                 }).fail(function() {
                     $('#btn6').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -310,6 +327,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
@@ -337,7 +355,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn7').html(player).attr('class', 'btn-default disabled');
+                    $('#btn7').html(player);
                 }).fail(function() {
                     $('#btn7').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -349,6 +367,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
@@ -376,7 +395,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn8').html(player).attr('class', 'btn-default disabled');
+                    $('#btn8').html(player);
                 }).fail(function() {
                     $('#btn8').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -388,6 +407,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
@@ -415,7 +435,7 @@
                     url: theurl,
                     data: null
                 }).done(function(val) {
-                    $('#btn9').html(player).attr('class', 'btn-default disabled');
+                    $('#btn9').html(player);
                 }).fail(function() {
                     $('#btn9').html('Error').attr('class', 'alert alert-danger');
                 });
@@ -427,6 +447,7 @@
                 }).done(function(val) {
 					if(val == "true")
 					{
+						disable();
 						alert(player + " won! :)");
 					}
                 });
