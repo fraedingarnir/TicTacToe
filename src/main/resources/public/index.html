@@ -58,13 +58,12 @@
         <script>
 		
 		function btn1(clicked_id)
-		{
-			alert(clicked_id);
-			
+		{	
 			$.ajax({
 				url: '/getvalue',
 			}).done(function(value) {
-			alert(value); 
+			alert("virkar");
+			alert(value);
 			});
 		}
 		
