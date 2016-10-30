@@ -10,7 +10,7 @@ public class Board
 		init();
 	}
 
-	private void init()
+	public static void init()
 	{
         	for (int col = 49; col < 49+ 9; ++col)
         	{

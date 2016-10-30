@@ -22,6 +22,8 @@ public class TicTacToeWeb implements SparkApplication{
     public void init() {
         final Board board = new Board();
 		
+		post("/init", (req, res) -> board.init());
+		
 		post("/haswon", (req, res) -> board.hasWon());
 		
 		post("/addplay0x", (req, res) ->{ 

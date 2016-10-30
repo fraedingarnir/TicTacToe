@@ -72,6 +72,12 @@
         <script>
         $(document).ready(function() {
 			
+			$.ajax({
+			type: "POST",
+			url: "init",
+			data: null
+			});
+			
 			var player = 'O';
 			
 			$('#one').submit(function( event ) {
