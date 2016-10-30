@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- load bootstrap for nicer ui -->
-        <link rel="stylesheet" href="game.css">
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     </head>
     <body>
@@ -105,6 +104,21 @@
             });
 			
 			$('#two').submit(function( event ) {
+			
+				if(player == 'X')
+				{
+					player = 'O';
+				}
+				else
+				{
+					player = 'X';
+				}
+				
+				var theurl = "/addplay1o";
+				if(player == 'X')
+				{
+					theurl = "/addplay1x";
+				}
                 $.ajax({
                     type: $('#two').attr('method'),
                     url: $('#two').attr('action'),
@@ -115,7 +129,11 @@
                     $('#btn2').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+				document.getElementById("btn2").disabled = true; 
+            });
+			
+			$('#three').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -124,10 +142,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn2").disabled = true; 
-            });
-			
-			$('#three').submit(function( event ) {
+				
+				var theurl = "/addplay2o";
+				if(player == 'X')
+				{
+					theurl = "/addplay2x";
+				}
                 $.ajax({
                     type: $('#three').attr('method'),
                     url: $('#three').attr('action'),
@@ -139,6 +159,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn3").disabled = true; 
+            });
+			
+			$('#four').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -147,10 +172,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn3").disabled = true; 
-            });
-			
-			$('#four').submit(function( event ) {
+				
+				var theurl = "/addplay3o";
+				if(player == 'X')
+				{
+					theurl = "/addplay3x";
+				}
                 $.ajax({
                     type: $('#four').attr('method'),
                     url: $('#four').attr('action'),
@@ -162,6 +189,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn4").disabled = true; 
+            });
+			
+			$('#five').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -170,10 +202,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn4").disabled = true; 
-            });
-			
-			$('#five').submit(function( event ) {
+				
+				var theurl = "/addplay4o";
+				if(player == 'X')
+				{
+					theurl = "/addplay4x";
+				}
                 $.ajax({
                     type: $('#five').attr('method'),
                     url: $('#five').attr('action'),
@@ -184,7 +218,12 @@
                     $('#btn5').html('Error').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
-				
+			
+				document.getElementById("btn5").disabled = true; 
+            });
+			
+			$('#six').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -193,10 +232,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn5").disabled = true; 
-            });
-			
-			$('#six').submit(function( event ) {
+				
+				var theurl = "/addplay5o";
+				if(player == 'X')
+				{
+					theurl = "/addplay5x";
+				}
                 $.ajax({
                     type: $('#six').attr('method'),
                     url: $('#six').attr('action'),
@@ -208,6 +249,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn6").disabled = true; 
+            });
+			
+			$('#seven').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -216,10 +262,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn6").disabled = true; 
-            });
-			
-			$('#seven').submit(function( event ) {
+				
+				var theurl = "/addplay6o";
+				if(player == 'X')
+				{
+					theurl = "/addplay6x";
+				}
                 $.ajax({
                     type: $('#seven').attr('method'),
                     url: $('#seven').attr('action'),
@@ -231,6 +279,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn7").disabled = true; 
+            });
+			
+			$('#eight').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -239,10 +292,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn7").disabled = true; 
-            });
-			
-			$('#eight').submit(function( event ) {
+				
+				var theurl = "/addplay7o";
+				if(player == 'X')
+				{
+					theurl = "/addplay7x";
+				}
                 $.ajax({
                     type: $('#eight').attr('method'),
                     url: $('#eight').attr('action'),
@@ -254,6 +309,11 @@
                 });
                 event.preventDefault();
 				
+				document.getElementById("btn8").disabled = true; 
+            });
+			
+			$('#nine').submit(function( event ) {
+			
 				if(player == 'X')
 				{
 					player = 'O';
@@ -262,10 +322,12 @@
 				{
 					player = 'X';
 				}
-				document.getElementById("btn8").disabled = true; 
-            });
-			
-			$('#nine').submit(function( event ) {
+				
+				var theurl = "/addplay8o";
+				if(player == 'X')
+				{
+					theurl = "/addplay8x";
+				}
                 $.ajax({
                     type: $('#nine').attr('method'),
                     url: $('#nine').attr('action'),
@@ -277,14 +339,6 @@
                 });
                 event.preventDefault();
 				
-				if(player == 'X')
-				{
-					player = 'O';
-				}
-				else
-				{
-					player = 'X';
-				}
 				document.getElementById("btn9").disabled = true; 
             });
         });
