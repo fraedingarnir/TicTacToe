@@ -10,12 +10,13 @@ public class Board
 		init();
 	}
 
-	public static void init()
+	public static boolean init()
 	{
         	for (int col = 49; col < 49+ 9; ++col)
         	{
         		board[col-49] = (char) col;
         	}
+			return true;
 	}
 
 	public static boolean addPlay(int input, char symbol)
