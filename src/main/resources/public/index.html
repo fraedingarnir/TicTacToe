@@ -14,7 +14,7 @@
         <table>
             <tr>
                 <td id ="4">
-				<button id="0" onClick="btn1(this.id)">1</button>
+				<button id="0" onClick="btn1(this.id)" action="/getvalue">1</button>
 				</td>
 				<td id ="4">
 				<button id="1" onClick="btn2(this.id)">2</button>
@@ -60,11 +60,13 @@
 		function btn1(clicked_id)
 		{	
 			$.ajax({
-				url: '/getvalue',
-			}).done(function(value) {
-			alert("virkar");
-			alert(value);
-			});
+            type     : "POST",
+            url      : $(this).attr('action'),
+            data     : $(this).serializeArray(),
+            success  : function(data) {
+				alert("virkar");
+            }
+    });
 		}
 		
 		function btn2(clicked_id)
