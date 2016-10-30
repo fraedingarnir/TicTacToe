@@ -13,7 +13,11 @@
 		
         <table>
             <tr>
-                <td id ="1">1</td>
+                <td id ="1">
+					<form id ="btn1" method="post" action="/getvalue" class="form-inline" role="form">
+					<button type="submit">getvalue</button>
+					</form>
+				</td>
                 <td id ="2">2</td>
                 <td id ="3">3</td>
             </tr>
@@ -28,8 +32,8 @@
                 <td id="9">9</td>
             </tr>
         </table>
-			<form method="post" action="/getvalue" class="form-inline" role="form">
-                <button type="submit">getvalue</button>
+			<form id ="one" method="post" action="/getvalue" class="form-inline" role="form">
+                <button type="submit" id="btn1">getvalue</button>
             </form>
 			<div id="results" class="alert alert-info">How many Chuck Norris require to screw a light
                 bulb? None, he will screw it all.</div>
@@ -39,17 +43,16 @@
         <!-- Ajax down below -->
         <script>
         $(document).ready(function() {
-            var form = $('form');
 			
-			form.submit(function( event ) {
+			$('#one').submit(function( event ) {
                 $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action'),
+                    type: $('#one').attr('method'),
+                    url: $('#one').attr('action'),
                     data: null
                 }).done(function(joke) {
-                    $('#results').html(joke).attr('class', 'alert alert-success');
+                    $('#btn1').html(joke).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#results').html('Error, no joke found...').attr('class', 'alert alert-danger');
+                    $('#btn1').html('Error, no joke found...').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
