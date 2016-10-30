@@ -14,7 +14,7 @@
         <table>
             <tr>
                 <td>
-					<form id ="one" method="post" action="/getvalue" class="form-inline" role="form">
+					<form id ="one" method="post" action="/addplay" class="form-inline" role="form">
 					<button type="submit" id="btn1">1</button>
 					</form>
 				</td>
@@ -78,7 +78,7 @@
                 $.ajax({
                     type: $('#one').attr('method'),
                     url: $('#one').attr('action'),
-                    data: null
+                    data: 'input=' + player + '&symbol=' + 0
                 }).done(function(val) {
                     $('#btn1').html(player).attr('class', 'btn-default disabled');
                 }).fail(function() {

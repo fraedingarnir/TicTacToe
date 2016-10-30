@@ -24,6 +24,7 @@ public class TicTacToeWeb implements SparkApplication{
 		
 		post("/getvalue", (req, res) -> board.getSquareElement(1));
 		
+		post("/addplay", (req, res) -> Board.addPlay(0,'X'));
 		post("/play", (req, res) -> {
 			//Board.addPlay(req.queryParams("id"), req.queryParams("symbol"));
 		

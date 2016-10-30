@@ -24,13 +24,14 @@ import spark.servlet.SparkApplication;
 		
 <span class="nc" id="L25">		post(&quot;/getvalue&quot;, (req, res) -&gt; board.getSquareElement(1));</span>
 		
-<span class="nc" id="L27">		post(&quot;/play&quot;, (req, res) -&gt; {</span>
+<span class="nc" id="L27">		post(&quot;/addplay&quot;, (req, res) -&gt; Board.addPlay(0,'X'));</span>
+<span class="nc" id="L28">		post(&quot;/play&quot;, (req, res) -&gt; {</span>
 			//Board.addPlay(req.queryParams(&quot;id&quot;), req.queryParams(&quot;symbol&quot;));
 		
-<span class="nc" id="L30">		res.status(200);</span>
-<span class="nc" id="L31">		return res;</span>
+<span class="nc" id="L31">		res.status(200);</span>
+<span class="nc" id="L32">		return res;</span>
 		});
 	   
-<span class="nc" id="L34">    }</span>
+<span class="nc" id="L35">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

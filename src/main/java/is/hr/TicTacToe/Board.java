@@ -18,7 +18,7 @@ public class Board
         	}
 	}
 
-	public boolean addPlay(int input, char symbol)
+	public static boolean addPlay(int input, char symbol)
 	{
 		if(input < 1 || input > 9)
 			return false;
@@ -29,7 +29,7 @@ public class Board
 		return true;
 	}
 
-	public boolean hasWon()
+	public static boolean hasWon()
 	{
 		for(int i = 0; i <= 6; i += 3)
 		{
