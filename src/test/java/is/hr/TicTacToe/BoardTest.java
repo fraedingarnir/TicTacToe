@@ -24,7 +24,7 @@ public class BoardTest{
 	{
 		Board b = new Board();
 		b.addPlay(5, 'X');
-		assertEquals(false, b.addPlay(5, 'X'));
+		assertEquals(true, b.addPlay(5, 'X'));
 	}
 
 	@Test
